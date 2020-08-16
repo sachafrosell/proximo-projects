@@ -132,6 +132,12 @@ function ExamplesNavbar(props) {
               </img>
             </Link>
           </NavbarBrand>
+          {colors.bCol == "black" ? <NavbarBrand>
+            <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
+              PROXIMO PROJECTS
+            </div>
+          </NavbarBrand> : ""}
+
           <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
 
             <NavItem>
