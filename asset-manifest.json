@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/proximo-projects/static/css/main.49fe3312.chunk.css",
+    "main.js": "/proximo-projects/static/js/main.ea5add87.chunk.js",
+    "main.js.map": "/proximo-projects/static/js/main.ea5add87.chunk.js.map",
+    "runtime-main.js": "/proximo-projects/static/js/runtime-main.4409a85d.js",
+    "runtime-main.js.map": "/proximo-projects/static/js/runtime-main.4409a85d.js.map",
+    "static/js/2.cadb1ee8.chunk.js": "/proximo-projects/static/js/2.cadb1ee8.chunk.js",
+    "static/js/2.cadb1ee8.chunk.js.map": "/proximo-projects/static/js/2.cadb1ee8.chunk.js.map",
+    "index.html": "/proximo-projects/index.html",
+    "precache-manifest.bacef80e59317c3d7dd120267430b8e1.js": "/proximo-projects/precache-manifest.bacef80e59317c3d7dd120267430b8e1.js",
+    "service-worker.js": "/proximo-projects/service-worker.js",
+    "static/css/main.49fe3312.chunk.css.map": "/proximo-projects/static/css/main.49fe3312.chunk.css.map",
+    "static/js/2.cadb1ee8.chunk.js.LICENSE.txt": "/proximo-projects/static/js/2.cadb1ee8.chunk.js.LICENSE.txt",
+    "static/media/800px_COLOURBOX25316311.jpg": "/proximo-projects/static/media/800px_COLOURBOX25316311.15c05b72.jpg",
+    "static/media/Eric.png": "/proximo-projects/static/media/Eric.2864ab5d.png",
+    "static/media/Felix.png": "/proximo-projects/static/media/Felix.367bb124.png",
+    "static/media/John.png": "/proximo-projects/static/media/John.7b180c0f.png",
+    "static/media/bede.png": "/proximo-projects/static/media/bede.346d2c0e.png",
+    "static/media/city3.jpg": "/proximo-projects/static/media/city3.8c613825.jpg",
+    "static/media/city4.jpg": "/proximo-projects/static/media/city4.9c40e369.jpg",
+    "static/media/cityscape.jpg": "/proximo-projects/static/media/cityscape.1381193a.jpg",
+    "static/media/floorplan2.png": "/proximo-projects/static/media/floorplan2.9ccca667.png",
+    "static/media/jo-hurst-croft.jpg": "/proximo-projects/static/media/jo-hurst-croft.de4fdd9c.jpg",
+    "static/media/joanna-cheong.jpg": "/proximo-projects/static/media/joanna-cheong.0fd4fd48.jpg",
+    "static/media/kigali-city-4.jpg": "/proximo-projects/static/media/kigali-city-4.fa0e7ae1.jpg",
+    "static/media/lake-burera.jpg": "/proximo-projects/static/media/lake-burera.6367ecf3.jpg",
+    "static/media/now-ui-kit.css": "/proximo-projects/static/media/nucleo-outline.8ebec31f.woff2",
+    "static/media/proximo-homepage.jpg": "/proximo-projects/static/media/proximo-homepage.3e8545d8.jpg",
+    "static/media/proximo-logo.PNG": "/proximo-projects/static/media/proximo-logo.e4a0b295.PNG",
+    "static/media/proximo-logobig.PNG": "/proximo-projects/static/media/proximo-logobig.a78673b5.PNG",
+    "static/media/road1.jpg": "/proximo-projects/static/media/road1.72649299.jpg",
+    "static/media/roadtingaling.jpg": "/proximo-projects/static/media/roadtingaling.72b142b9.jpg",
+    "static/media/tuk-tuk2.jpg": "/proximo-projects/static/media/tuk-tuk2.3d21285c.jpg",
+    "static/media/tuk-tuk22.jpg": "/proximo-projects/static/media/tuk-tuk22.2de63d4a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4409a85d.js",
+    "static/js/2.cadb1ee8.chunk.js",
+    "static/css/main.49fe3312.chunk.css",
+    "static/js/main.ea5add87.chunk.js"
+  ]
+}
