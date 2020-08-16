@@ -63,7 +63,7 @@ function About() {
                 <div style={{paddingTop: "35px"}}>
                   <h1 style={titleStyle} className="title">
                     <span style={{fontWeight: "900px"}}>
-                      ABOUT LOUISE
+                      ABOUT
 
                     </span>
                   </h1>
@@ -112,11 +112,15 @@ function About() {
                 </div>
 
               </Col>
-              <Col>
+              <Col style={{position: "relative"}}>
                 <img
+
                   src={TukTukImg}
                   style={{
-                    paddingTop: "35px"
+                    position: "absolute",
+                    verticalAlign: "middle",
+                    top: "50%",
+                    marginTop: "-200px"
                   }}
                 >
 

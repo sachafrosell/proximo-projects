@@ -32,6 +32,8 @@ const ButtonStyle = {
   padding: "20px"
 }
 
+const offset = 383
+
 
 function ExamplesNavbar(props) {
 
@@ -137,8 +139,7 @@ function ExamplesNavbar(props) {
               PROXIMO PROJECTS
             </div>
           </NavbarBrand> : ""}
-
-          <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
+          {colors.bCol == "white" ? <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
 
             <NavItem>
               <Link to="/">
@@ -165,7 +166,7 @@ function ExamplesNavbar(props) {
                     borderRadius: "0px",
                     padding: "15px",
                     marginTop: "20px"
-                }} > ABOUT </Button>
+                }} > GALLERY </Button>
               </Link>
             </NavItem>
             <NavItem>
@@ -182,7 +183,52 @@ function ExamplesNavbar(props) {
                 }} > CONTACT </Button>
               </Link>
             </NavItem>
-          </Nav>
+          </Nav> : <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
+
+            <NavItem>
+              <Link to="/">
+                <Button style={{
+                    background: "none",
+                    color: colors.bCol,
+                    position: "relative",
+                    float: "right",
+                    fontSize: "15px",
+                    borderRadius: "0px",
+                    padding: "15px",
+                    marginTop: "20px"
+                }} > HOME </Button>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/">
+                <Button style={{
+                    background: "none",
+                    color: colors.bCol,
+                    position: "relative",
+                    float: "right",
+                    fontSize: "15px",
+                    borderRadius: "0px",
+                    padding: "15px",
+                    marginTop: "20px"
+                }} > GALLERY </Button>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/">
+                <Button style={{
+                    background: "none",
+                    color: colors.bCol,
+                    position: "relative",
+                    float: "right",
+                    fontSize: "15px",
+                    borderRadius: "0px",
+                    padding: "15px",
+                    marginTop: "20px"
+                }} > CONTACT </Button>
+              </Link>
+            </NavItem>
+          </Nav>}
+
 
         </div>
 

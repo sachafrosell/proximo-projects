@@ -51,6 +51,11 @@ function Competition() {
 
   return (
     <>
+      <div >
+        <h1 style={{textAlign: "center", fontFamily: "Homemade Apple", opacity: "90%", fontSize: "40px"}}>
+          Follow My Instagram
+        </h1>
+      </div>
       <div style={{paddingBottom: "50px"}}>
 
         <div class="powr-instagram-feed" id="f7665533_1597589411"></div>
