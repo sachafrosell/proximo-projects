@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/proximo-projects/precache-manifest.bacef80e59317c3d7dd120267430b8e1.js"
+  "/proximo-projects/precache-manifest.2f711a667b1aca47c8b9e8008948b758.js"
 );
 
 self.addEventListener('message', (event) => {
