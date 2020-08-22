@@ -1,7 +1,7 @@
 import React from "react";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import store from './Store.js'
 import About from './About.js'
 import Competition from './Competition.js'
@@ -10,7 +10,7 @@ import Solution from './Solution.js'
 import Overview from './Overview.js'
 import Team from './Team.js'
 import InfoFooter from "./components/Footers/InfoFooter.js"
-import Pillars from './Pillars2.js'
+
 import HousingInfo from './HousingInfo.js'
 import HousingInfo2 from './HousingInfo2.js'
 

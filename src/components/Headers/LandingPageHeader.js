@@ -70,7 +70,7 @@ function LandingPageHeader() {
         ></div>
         <div className="content-left">
           <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
-            {dimensions.width >= 600 ? <span> <h1 className="title" style={{textAlign: "right", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
+            <span> <h1 className="title" style={{textAlign: "right", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
               <span style={{fontWeight: "900"}}>
                 PROXIMO
               </span>
@@ -89,51 +89,8 @@ function LandingPageHeader() {
 
 
             </h1>
-              
-            </span> : <span><h1 className="title" style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "300"}}>
-              <span >
-                BUILDING
-              </span>
-              <span> </span>
-            <br />
-              <span style={{fontWeight: "900"}}>
-                SUSTAINABLE
-              </span>
-              <br />
-              <span >
-                INFRASTRUCTURE
-              </span>
 
-            </h1>
-            <Row>
-
-              <Link to='/arc-roads'>
-                <Button style={ButtonStyle}>
-                  ARC ROAD
-                </Button>
-              </Link>
-
-              <Link to='/arc-housing'>
-                <Button style={ButtonStyle}>
-                  ARC HOUSING
-                </Button>
-              </Link>
-            </Row>
-            <Row style={{paddingTop: "20px"}}>
-              <Link to='/contact'>
-                <Button style={ButtonStyle}>
-                  GET IN TOUCH
-                </Button>
-              </Link>
-
-            </Row>
-
-
-
-
-
-
-          </span>}
+          </span> 
 
 
 

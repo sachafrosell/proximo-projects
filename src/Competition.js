@@ -18,11 +18,11 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 
-import Kigali from './assets/img/kigali-city-4.jpg'
+
 
 
 
@@ -51,12 +51,23 @@ function Competition() {
 
   return (
     <>
-      <div >
-        <h1 style={{textAlign: "center", fontFamily: "Homemade Apple", opacity: "90%", fontSize: "40px"}}>
-          Follow My Instagram
+      <div style={{paddingTop: "100px"}}>
+        <h1 title="Social Media" style={{textAlign: "center", opacity: "90%", fontSize: "40px", fontWeight: "900px"}}>
+          FOLLOW US ON INSTAGRAM
         </h1>
+        <div style={{justifyContent: "center"}}>
+          <p style={{
+            border: "0.5px solid black",
+            margin: "auto",
+            marginTop: "0px",
+            marginBottom: "50px",
+            display: "block",
+            maxWidth: "50px",
+
+          }}></p>
+        </div>
       </div>
-      <div style={{paddingBottom: "50px"}}>
+      <div style={{paddingBottom: "100px"}}>
 
         <div class="powr-instagram-feed" id="f7665533_1597589411"></div>
         <script src="https://www.powr.io/powr.js?platform=react"></script>

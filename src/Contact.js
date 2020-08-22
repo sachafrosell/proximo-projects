@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // components
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import store from './Store.js'
 import TukTukImg2 from './assets/img/tuk-tuk2.jpg'
 import Team from './Team.js'
@@ -174,9 +174,9 @@ const buttonControl = () => {
 
           </Container>
 
-           <Team />
+
           <InfoFooter />
-          <DarkFooter />
+
 
 
         </>

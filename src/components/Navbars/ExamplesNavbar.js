@@ -134,7 +134,7 @@ function ExamplesNavbar(props) {
               </img>
             </Link>
           </NavbarBrand>
-          {colors.bCol == "black" ? <NavbarBrand>
+          {colors.bCol == "black" && dimensions.width > 1000 ? <NavbarBrand>
             <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
               PROXIMO PROJECTS
             </div>
@@ -156,7 +156,7 @@ function ExamplesNavbar(props) {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/">
+              <Link to="/about">
                 <Button style={{
                     background: "none",
                     color: colors.bCol,
@@ -166,11 +166,11 @@ function ExamplesNavbar(props) {
                     borderRadius: "0px",
                     padding: "15px",
                     marginTop: "20px"
-                }} > GALLERY </Button>
+                }} > ABOUT </Button>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/">
+              <Link to="/contact">
                 <Button style={{
                     background: "none",
                     color: colors.bCol,
@@ -200,7 +200,7 @@ function ExamplesNavbar(props) {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/">
+              <Link to="/about">
                 <Button style={{
                     background: "none",
                     color: colors.bCol,
@@ -210,11 +210,11 @@ function ExamplesNavbar(props) {
                     borderRadius: "0px",
                     padding: "15px",
                     marginTop: "20px"
-                }} > GALLERY </Button>
+                }} > ABOUT </Button>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/">
+              <Link to="/contact">
                 <Button style={{
                     background: "none",
                     color: colors.bCol,

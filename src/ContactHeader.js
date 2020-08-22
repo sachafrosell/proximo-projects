@@ -18,11 +18,11 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 
-import Kigali from './assets/img/road1.jpg'
+import Beach from './assets/img/miami-skyline.jpg'
 
 
 
@@ -60,7 +60,8 @@ function ContactHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("./assets/img/road1.jpg") + ")",
+            backgroundImage: "url(" + require("./assets/img/miami-skyline2.jpg") + ")",
+            top: "120px"
           }}
           ref={pageHeader}
         ></div>

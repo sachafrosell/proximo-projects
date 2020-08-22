@@ -18,11 +18,11 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 
-import TukTukImg from './assets/img/floorplan2.png'
+import Sketch from './assets/img/sketch.png'
 import TukTukImg2 from './assets/img/tuk-tuk22.jpg'
 
 
@@ -30,6 +30,21 @@ const titleStyle = {
    fontWeight: "900px",
    fontSize: "30px",
    marginBottom: "5px"
+
+}
+
+const ButtonStyle = {
+  background: "none",
+  color: "black",
+  outlineColor: "black",
+  border:"solid 0.7px black",
+  borderRadius: "0px",
+  float: "left",
+  marginRight: "5px",
+  marginLeft: "3px",
+  marginTop: "8px",
+  fontSize: "10px",
+  opacity: "90%"
 
 }
 
@@ -61,12 +76,14 @@ function About() {
             <Row>
               <Col className="text-left" md="6">
                 <div style={{paddingTop: "35px"}}>
-                  <h1 style={titleStyle} className="title">
-                    <span style={{fontWeight: "900px"}}>
-                      ABOUT
+                  <h2 title="About">
+                    <span style={{fontStyle: "italic", paddingBottom: "10px"}}>
+                      Taking your interior to the next level
 
                     </span>
-                  </h1>
+
+                  </h2>
+
                   <p style={{
                     border: "0.5px solid black",
                     marginTop: "15px",
@@ -74,19 +91,10 @@ function About() {
                     display: "block",
                     maxWidth: "50px"
                   }}></p>
-                  <h5 className="description" style={{fontSize: "17px", color: "#6d747c", fontWeight: "500px"}}>
+                  <h5 className="description" style={{fontSize: "17px", color: "#6d747c", fontWeight: "500px", paddingTop: "10px"}}>
 
 
-                    Louise Finlay started Proximo Projects to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
-
-
-
-                  </h5>
-                  <h5 className="description" style={{fontSize: "17px", color: "#6d747c", fontWeight: "500px"}}>
-
-
-
-                    Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+                    Whether you're looking to revamp your current home, transition to a new space, or you're simply after some styling advice, Proximo Projects is a boutique interior design firm in Miami beach that can help you discover your style and create beautiful spaces that feel like you.
 
 
 
@@ -95,8 +103,17 @@ function About() {
 
 
 
+                    We believe in the power of collaboration and will work closely with you to design your space. From mood boards, to hand drawn plans, to computer renders, we will give you all the visuals you need to imagine your new space. And we'll work with you on budgets, material selection and installation plans.
 
-                    A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+
+
+                  </h5>
+                  <h5 className="description" style={{fontSize: "17px", color: "#6d747c", fontWeight: "500px"}}>
+
+
+
+
+                    To get started and schedule a consultation simply fill in our contact form and we'll be in touch.
 
 
                   </h5>
@@ -106,21 +123,24 @@ function About() {
 
 
 
-                    Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+                    We're excited to meet you!
 
                   </h5>
+                  <Button style={ButtonStyle}>
+                    CONTACT US
+                  </Button>
                 </div>
 
               </Col>
               <Col style={{position: "relative"}}>
                 <img
 
-                  src={TukTukImg}
+                  src={Sketch}
                   style={{
-                    position: "absolute",
+                    paddingTop: "50px",
                     verticalAlign: "middle",
-                    top: "50%",
-                    marginTop: "-200px"
+
+
                   }}
                 >
 

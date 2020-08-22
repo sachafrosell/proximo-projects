@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, setState } from 'react';
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import store from './Store.js'
 import About from './About.js'
 import Competition from './Competition.js'
@@ -11,6 +11,7 @@ import Overview from './Overview.js'
 import Team from './Team.js'
 import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
+import WorkGallery from './WorkGallery.js'
 
 
 // reactstrap ./components
@@ -29,7 +30,6 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "./components/Headers/LandingPageHeader.js";
 import ArcNavBar from "./components/Navbars/ArcNavbar.js"
-
 import DarkFooter from "./components/Footers/DarkFooter.js";
 
 
@@ -38,10 +38,12 @@ const top = () => {
   window.scrollTo(0, 0);
 }
 
+
 function useForceUpdate(){
     const [value, setValue] = useState(0); // integer state
     return () => setValue(value => ++value); // update the state to force render
 }
+
 
 function LandingPage() {
 
@@ -50,6 +52,8 @@ function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
 
+
+  const [loading, setLoading] = React.useState(false);
 
 
   React.useEffect(() => {
@@ -69,17 +73,21 @@ function LandingPage() {
 
       {top}
 
+
       <ExamplesNavbar forceUpdate={top()}/>
       <div className="wrapper">
         <LandingPageHeader/>
 
       </div>
       <About />
+
+      <WorkGallery />
+
       <Competition />
 
 
       <InfoFooter />
-      
+
     </>
   );
 }

@@ -18,7 +18,7 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 

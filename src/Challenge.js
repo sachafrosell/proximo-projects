@@ -18,12 +18,11 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 
-import TukTukImg from './assets/img/800px_COLOURBOX25316311.jpg'
-import TukTukImg2 from './assets/img/tuk-tuk22.jpg'
+import Louise from './assets/img/louise2.jpeg'
 
 
 const titleStyle = {
@@ -75,153 +74,147 @@ function Challenge() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
   return (
     <>
 
-      <div className="wrapper" style={{background: "white"}}>
-
-        <div className="section section-about-us" style={{ paddingTop: "80px", paddingBottom: "60px", background: "white"}}>
-          <Container>
-            <Row style={{justifyContent: "center"}}>
-              <Col className="text-center" md="12" style={{padding: "0px"}}>
-                <div style={divStyle}>
-                  <h1 style={titleStyle} className="title">
-                    <span style={{fontWeight: "900px"}}>
-                      THE CHALLENGE
-
-                    </span>
-                  </h1>
-                  <hr style={{border: "0.5px solid white",
-                    marginTop: "15px",
-                    marginBottom: "15px",
-                    display: "block",
-                  maxWidth: "50px"}}></hr>
-                <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
-
-                     Existing transport shortcomings increase both congestion and pollution in cities and negatively affect connectivity in rural areas.
-                    This lack of key infrastructure has knock on effects on
-                    the costs of goods and services.
-                    It is globally recognised that roads are central to economic development, however in the countries in which we operate, only a small percentage of roads are paved. For example, in Rwanda only 19% of roads are paved. This amounts to a 15,000km unpaved road network in Rwanda alone.
+      <div className="wrapper" style={{background: "white", postion: 'relative'}}>
+        {console.log(dimensions.width)}
+        {dimensions.width > 1430 ? <Row>
+          <Col xs={7} style={{paddingLeft: "100px", paddingTop: "50px"}}>
+            <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
+              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+            </h5>
+            <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
+              Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+            </h5>
+            <h5 title="A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe.">
+              A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+            </h5>
+            <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
+              Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+            </h5>
+          </Col>
+          <Col xs={5}>
+            <img src={Louise}
+              style={{maxHeight: "100%", paddingLeft: "50px", margin: "auto"}}/>
 
 
-                  </h5>
-                  <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
+          </Col>
 
-                  ARC Build delivers sustainable infrastructure which improves access to vital services such as Health, Education, Industry, Farming, Tourism and Transport, saving time, money and energy. We work in partnerships with local and national governments to address these challenges through our market leading sustainable approach to road building.
-
-
-                  </h5>
-                </div>
-
-              </Col>
-
-
-
-            </Row>
-            <Row style={{paddingTop: "35px", justifyContent: "center", border: "0.5px solid black", marginTop: "20px"}}>
-              <Col className="text-center" md="12" >
-
-                <div style={divStyle3} >
-                  <div>
-                    <h1 style={titleStyle} className="title">
-                      <span style={{fontWeight: "900px"}}>
-                        THE SOLUTION
-
-                      </span>
-                    </h1>
-                    <hr style={{border: "0.7px solid black",
-                        marginTop: "15px",
-                        marginBottom: "15px",
-                        display: "block",
-                    maxWidth: "50px"}}></hr>
-                  <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
-
-                      ARC Builds exclusive partnerships allowing us to deliver a unique globally leading solution to road building.
-                      We can build feeder, secondary and tertiary roads and provide our clients an average saving of
-                      25% whilst creating local jobs and being much better for the environment.
-                      Our roads are high quality and will stand the test of time.
-                    </h5>
-                  </div>
-                </div>
+        </Row> : dimensions.width > 1364 ? <Row>
+          <Col xs={6} style={{paddingLeft: "100px", paddingTop: "50px"}}>
+            <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
+              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+            </h5>
+            <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
+              Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+            </h5>
+            <h5 title="A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe.">
+              A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+            </h5>
+            <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
+              Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+            </h5>
+          </Col>
+          <Col xs={6}>
+            <img src={Louise}
+              style={{maxHeight: "100%", paddingLeft: "50px", margin: "auto"}}/>
 
 
-              </Col>
-              <Col className="text-center" md="4">
+          </Col>
 
-                <div style={divStyle2} >
-                  <div>
-                    <h1 style={titleStyle} className="title">
-                      <span style={{fontWeight: "900px", fontSize: "25px"}}>
-                        STRONG ROADS:
-
-                      </span>
-                    </h1>
-                    <hr style={{border: "0.7px solid black",
-                        marginTop: "15px",
-                        marginBottom: "15px",
-                        display: "block",
-                    maxWidth: "50px"}}></hr>
-                  <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
-
-                      Our roads have unconfined compressive strength approaching low-grade concrete of 1750 pso (123.07 kg/p/cm2).
-                    </h5>
-                  </div>
-                </div>
+        </Row> : dimensions.width > 1335 ? <Row>
+          <Col xs={5} style={{paddingLeft: "100px", paddingTop: "50px"}}>
+            <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
+              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+            </h5>
+            <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
+              Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+            </h5>
+            <h5 title="A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe.">
+              A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+            </h5>
+            <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
+              Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+            </h5>
+          </Col>
+          <Col xs={7}>
+            <img src={Louise}
+              style={{maxHeight: "100%", paddingLeft: "50px", margin: "auto"}}/>
 
 
-              </Col>
-              <Col className="text-center" md="4" >
+          </Col>
 
-                <div style={divStyle2} >
-                  <div>
-                    <h1 style={titleStyle} className="title">
-                      <span style={{fontWeight: "900px", fontSize: "25px"}}>
-                        ECO FRIENDLY:
-
-                      </span>
-                    </h1>
-                    <hr style={{border: "0.7px solid black",
-                        marginTop: "15px",
-                        marginBottom: "15px",
-                        display: "block",
-                    maxWidth: "50px"}}></hr>
-                  <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
-
-                      Our product will not leach into the soil or pollution the surroundings. We use the local soil thus significantly reducing the carbon footprint of the input costs and the road as a whole.
-                    </h5>
-                  </div>
-                </div>
+        </Row> : dimensions.width > 1250 ? <Row>
+          <Col xs={8} style={{paddingLeft: "100px", paddingTop: "50px"}}>
+            <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
+              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+            </h5>
+            <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
+              Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+            </h5>
+            <h5 title="A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe.">
+              A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+            </h5>
+            <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
+              Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+            </h5>
+          </Col>
+          <Col xs={4}>
+            <img src={Louise}
+              style={{maxHeight: "100%", paddingLeft: "50px", paddingTop: "100px", paddingRight: "50px",margin: "auto"}}/>
 
 
-              </Col>
-              <Col className="text-center" md="4" >
+          </Col>
 
-                <div style={divStyle2} >
-                  <div>
-                    <h1 style={titleStyle} className="title">
-                      <span style={{fontWeight: "900px", fontSize: "25px"}}>
-                        QUALITY PRODUCT:
+        </Row> : <Row>
+          <Col xs={12} style={{paddingLeft: "100px", paddingTop: "50px", paddingRight: "100px"}}>
+            <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
+              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+            </h5>
+            <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
+              Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.
+            </h5>
+            <h5 title="A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe.">
+              A global citizen, Louise moved to Miami from London 10 years ago and has also spent time in New York, Australia, Africa, and in mainland Europe. Her extensive travels have introduced her to a wealth of different people, places and influences which lend her designs a bold, cosmopolitan style. And they have taught her that the best journeys are all about the people you take them with, which is why she strongly believes in close collaboration with her clients at every step of the design process.
+            </h5>
+            <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
+              Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
+            </h5>
+          </Col>
+          <Col xs={3}>
+          </Col>
 
-                      </span>
-                    </h1>
-                    <hr style={{border: "0.7px solid black",
-                        marginTop: "15px",
-                        marginBottom: "15px",
-                        display: "block",
-                    maxWidth: "50px"}}></hr>
-                  <h5 className="description" style={{fontSize: "17px", color: "black", fontWeight: "500px", opacity: "60%"}}>
-
-                      We build feeder and secondary roads to the same quality as asphalt or concrete roads. Our approach ensures that maintenance is minimal, quick and comparatively cheap.
-                    </h5>
-                  </div>
-                </div>
+          <Col>
+            <img src={Louise}
+              style={{maxWidth: "100%", paddingTop: "20px", paddingBottom: "50px"}}/>
 
 
-              </Col>
-            </Row>
-            <div className="separator separator-primary"></div>
-          </Container>
-        </div>
+          </Col>
+          <Col xs={3}>
+          </Col>
+
+        </Row>}
+
+
       </div>
     </>
   );

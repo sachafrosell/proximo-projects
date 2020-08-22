@@ -41,7 +41,7 @@ function InfoFooter() {
 
             </div>
             <h5 style={{fontSize: "13px", opacity: "50%"}}>
-              Proximo Projects is the design firm that helps you create and style your next space.
+              Proximo Projects is an interior deign firm in Miami Beach.
             </h5>
             <div className="copyright" id="copyright" style={{fontSize: "13px", opacity: "20%"}}>
               © {new Date().getFullYear()}, Proximo Projects
@@ -62,10 +62,16 @@ function InfoFooter() {
                 </a>
               </Link>
               <p style={{marginTop: "-10px"}}></p>
-              <Link to='/'>
+                <Link to='/about'>
+                  <a style={{color: "black"}}>
+                    ABOUT
+                  </a>
+                </Link>
+                <p style={{marginTop: "-10px"}}></p>
+              <Link to='/contact'>
 
                 <a style={{color: "black"}}>
-                  CONTACT ME
+                  CONTACT US
                 </a>
               </Link>
               <p style={{marginTop: "-10px"}}></p>

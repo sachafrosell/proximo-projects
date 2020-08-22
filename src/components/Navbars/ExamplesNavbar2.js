@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoDark from "../../assets/img/logo_BUILD_DARK.png";
+import LogoLight from "../../assets/img/proximo-logo.PNG";
+import LogoDark from "../../assets/img/proximo-logo.PNG";
 
 // reactstrap components
 import {
@@ -15,6 +16,8 @@ import {
 var Logo = LogoDark
 var ButtonColor = "black"
 var navbarColor = "navbar-white"
+
+const offset = 383
 
 
 
@@ -44,224 +47,79 @@ function ExamplesNavbar(props) {
   return (
     <>
 
-      <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg" style={{height: 120}}>
-
-        <Container>
-          <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
-
-            <NavbarBrand style={{padding: "0px"}}>
-              <Link to='/home'>
-
-              <img
-                src={Logo}
-                style={{
-                    width: "110px",
-                    position: "10px"
-                }}
-              >
-              </img>
-            </Link>
-            </NavbarBrand>
-            {dimensions.width >= 1200 ? <Nav style={{float: "right", marginRight: "-950px"}}>
-              <NavItem>
-                <Link to="/home" >
-                  <Button
-                    style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                    }} onClick={props.forceUpdate} > HOME </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-roads">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > ROAD </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-housing">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > HOUSING </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/contact">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > GET IN TOUCH </Button>
-                </Link>
-              </NavItem>
+    <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
 
+      <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
 
-            </Nav>
-            : dimensions.width >= 992 && dimensions.width < 1200 ? <Nav style={{float: "right", marginRight: "-800px"}}>
-              <NavItem>
-                <Link to="/home" >
-                  <Button
-                    style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                    }} onClick={props.forceUpdate} > HOME </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-roads">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > ROAD </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-housing">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > HOUSING </Button>
-                </Link>
-              </NavItem>
-
-              <NavItem>
-                <Link to="/contact">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > GET IN TOUCH </Button>
-                </Link>
-              </NavItem>
-
-
-
-            </Nav> : dimensions.width >= 768 && dimensions.width < 992 ? <Nav style={{float: "right", marginRight: "-350px"}}>
-              <NavItem>
-                <Link to="/home" >
-                  <Button
-                    style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                    }} onClick={props.forceUpdate} > HOME </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-roads">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > ROAD </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/arc-housing">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > HOUSING </Button>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/contact">
-                  <Button style={{
-                      background: "none",
-                      color: ButtonColor,
-                      position: "relative",
-                      float: "right",
-                      fontSize: "15px",
-                      borderRadius: "0px",
-                      padding: "15px",
-                      marginTop: "20px"
-                  }} > GET IN TOUCH </Button>
-                </Link>
-              </NavItem>
-
-
-
-            </Nav> :  ""}
-
-            <div class="topnav-right" style={{paddingRight: "150px", marginTop: "-10px"}}>
-
-
-
-
-
-
-
-            </div>
+        <NavbarBrand style={{padding: "0px", paddingLeft: "20px"}}>
+          <Link to="/">
+            <img
+              src={LogoLight}
+              style={{
+                  width: "110px",
+                  position: "10px"
+              }}
+            >
+            </img>
+          </Link>
+        </NavbarBrand>
+        <NavbarBrand>
+          <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
+            PROXIMO PROJECTS
           </div>
+        </NavbarBrand>
+        <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
 
-        </Container>
-      </Navbar>
+          <NavItem>
+            <Link to="/">
+              <Button style={{
+                  background: "none",
+                  color: "black",
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > HOME </Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/">
+              <Button style={{
+                  background: "none",
+                  color: "black",
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > ABOUT </Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/">
+              <Button style={{
+                  background: "none",
+                  color: "black",
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > CONTACT </Button>
+            </Link>
+          </NavItem>
+        </Nav>
+
+
+      </div>
+
+
+    </Navbar>
     </>
   );
 }

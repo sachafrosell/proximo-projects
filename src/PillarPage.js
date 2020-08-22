@@ -1,7 +1,7 @@
 import React from "react";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-import ContentNewCard from "./ContentNewCard.js"
+
 import store from './Store.js'
 import About from './About.js'
 import Competition from './Competition.js'
@@ -63,7 +63,7 @@ function PillarPage() {
         <Pillars />
 
         <InfoFooter />
-        <DarkFooter />
+
 
       </>
     );
