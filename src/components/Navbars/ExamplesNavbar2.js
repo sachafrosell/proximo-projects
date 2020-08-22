@@ -86,7 +86,7 @@ function ExamplesNavbar(props) {
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/">
+            <Link to="/about">
               <Button style={{
                   background: "none",
                   color: "black",
@@ -100,7 +100,7 @@ function ExamplesNavbar(props) {
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/">
+            <Link to="/contact">
               <Button style={{
                   background: "none",
                   color: "black",
