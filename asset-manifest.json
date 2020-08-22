@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/proximo-projects/static/css/main.49fe3312.chunk.css",
-    "main.js": "/proximo-projects/static/js/main.cf229b5d.chunk.js",
-    "main.js.map": "/proximo-projects/static/js/main.cf229b5d.chunk.js.map",
+    "main.js": "/proximo-projects/static/js/main.2446fc3a.chunk.js",
+    "main.js.map": "/proximo-projects/static/js/main.2446fc3a.chunk.js.map",
     "runtime-main.js": "/proximo-projects/static/js/runtime-main.4409a85d.js",
     "runtime-main.js.map": "/proximo-projects/static/js/runtime-main.4409a85d.js.map",
     "static/js/2.746e7e08.chunk.js": "/proximo-projects/static/js/2.746e7e08.chunk.js",
     "static/js/2.746e7e08.chunk.js.map": "/proximo-projects/static/js/2.746e7e08.chunk.js.map",
     "index.html": "/proximo-projects/index.html",
-    "precache-manifest.7c17d5a3b6eebd455bc96fafa43a0ff2.js": "/proximo-projects/precache-manifest.7c17d5a3b6eebd455bc96fafa43a0ff2.js",
+    "precache-manifest.9f52ac7dcc15aaae8e88eb5e71e91ccb.js": "/proximo-projects/precache-manifest.9f52ac7dcc15aaae8e88eb5e71e91ccb.js",
     "service-worker.js": "/proximo-projects/service-worker.js",
     "static/css/main.49fe3312.chunk.css.map": "/proximo-projects/static/css/main.49fe3312.chunk.css.map",
     "static/js/2.746e7e08.chunk.js.LICENSE.txt": "/proximo-projects/static/js/2.746e7e08.chunk.js.LICENSE.txt",
@@ -42,6 +42,6 @@
     "static/js/runtime-main.4409a85d.js",
     "static/js/2.746e7e08.chunk.js",
     "static/css/main.49fe3312.chunk.css",
-    "static/js/main.cf229b5d.chunk.js"
+    "static/js/main.2446fc3a.chunk.js"
   ]
 }

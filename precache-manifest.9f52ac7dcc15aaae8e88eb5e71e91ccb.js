@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a1c7d3b24c758221edd35e073826dd6",
+    "revision": "a91b07189e72408ca2d8d670ceab082a",
     "url": "/proximo-projects/index.html"
   },
   {
-    "revision": "6aa95d3a721ba956fc45",
+    "revision": "860eda56e48bb0daaeb7",
     "url": "/proximo-projects/static/css/main.49fe3312.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/proximo-projects/static/js/2.746e7e08.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6aa95d3a721ba956fc45",
-    "url": "/proximo-projects/static/js/main.cf229b5d.chunk.js"
+    "revision": "860eda56e48bb0daaeb7",
+    "url": "/proximo-projects/static/js/main.2446fc3a.chunk.js"
   },
   {
     "revision": "10bfe15aa99569fe4af0",
