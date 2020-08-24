@@ -106,7 +106,7 @@ function InfoFooter() {
               </a>
               <br />
               <a>
-                info@proximoprojects.com
+                louise@proximoprojects.com
               </a>
             </div>
 
