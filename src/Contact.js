@@ -108,7 +108,7 @@ const buttonControl = () => {
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              placeholder="First Name..."
+                              placeholder="Full Name..."
                               type="text"
 
 

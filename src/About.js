@@ -78,7 +78,7 @@ function About() {
                 <div style={{paddingTop: "35px"}}>
                   <h2 title="About">
                     <span style={{fontStyle: "italic", paddingBottom: "10px"}}>
-                      Taking your interior to the next level
+                      Taking your interiors to the next level
 
                     </span>
 
@@ -113,7 +113,7 @@ function About() {
 
 
 
-                    To get started and schedule a consultation simply fill in our contact form and we'll be in touch.
+                    To get started and schedule a consultation, simply fill in our contact form and we'll be in touch.
 
 
                   </h5>

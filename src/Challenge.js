@@ -100,7 +100,7 @@ function Challenge() {
         {dimensions.width > 1430 ? <Row>
           <Col xs={7} style={{paddingLeft: "100px", paddingTop: "50px"}}>
             <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
-              Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
+              Louise Finlay started Proximo Projects to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
             </h5>
             <h5 title="Louise understands that to know what’s coming next, you need to appreciate what has come before">
               Louise understands that to know what’s coming next, you need to appreciate what has come before. That belief was instilled during her study of the history of art and architecture and is reflected in her designs and in her approach to preserving the authenticity of a space and use of vintage pieces, while creating something entirely new.

@@ -65,7 +65,7 @@ function PillarPageHeader() {
           className="page-header-image"
           style={{
             backgroundImage: "url(" + require("../../assets/img/palm-trees.jpg") + ")",
-            
+
           }}
           ref={pageHeader}
         ></div>
@@ -73,7 +73,7 @@ function PillarPageHeader() {
           <Container style={{padding: "0px", paddingTop: "250px"}}>
             <h1 className="title" style={{textAlign: "left", fontSize: "60px", letterSpacing: "5px", fontWeight: "900"}}>
               <span >
-                 MEET LOUISE:
+                 MEET LOUISE
               </span>
             </h1>
 

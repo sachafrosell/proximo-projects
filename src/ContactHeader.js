@@ -84,7 +84,7 @@ function ContactHeader() {
             }}></p>
           <h5 className="description" style={{fontSize: "17px", fontWeight: "500px", color: "#FFF", fontWeight: "500px"}}>
 
-              We are always looking for exciting new projects to help work on. Please contact us for a quote: We are always happy to discuss your project and its requirements.
+              We are always looking for exciting new projects to help work on. Please contact us for a quote. We are always happy to discuss your project and its requirements.
             </h5>
 
             <h5 className="description" style={{fontSize: "17px", color: "#FFF", fontWeight: "500px"}}>
