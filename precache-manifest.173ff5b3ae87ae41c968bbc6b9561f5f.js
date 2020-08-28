@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27c51a7c0cbcccd337f711b15f8ecafa",
+    "revision": "47a38503038e6b0bf4254d1b20d64bd7",
     "url": "/index.html"
   },
   {
-    "revision": "14de20851b693c859b2b",
-    "url": "/static/css/main.b6167fd6.chunk.css"
+    "revision": "55a7c7c04131a1b62f10",
+    "url": "/static/css/main.f650d906.chunk.css"
   },
   {
     "revision": "d7321ba027ca5f29639c",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.746e7e08.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14de20851b693c859b2b",
+    "revision": "55a7c7c04131a1b62f10",
     "url": "/static/js/main.6e8823c7.chunk.js"
   },
   {
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bc52f39cba76e9d0bab6e3b15bc7d8f8",
     "url": "/static/media/Calacatta.bc52f39c.jpg"
+  },
+  {
+    "revision": "5ac122f3eb7854a00d830f4874472b56",
+    "url": "/static/media/CaviarDreams-webfont.5ac122f3.woff"
   },
   {
     "revision": "2864ab5d009cf0ee77a99246fe2495ee",

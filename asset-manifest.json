@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6167fd6.chunk.css",
+    "main.css": "/static/css/main.f650d906.chunk.css",
     "main.js": "/static/js/main.6e8823c7.chunk.js",
     "main.js.map": "/static/js/main.6e8823c7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0312cf06.js",
@@ -8,12 +8,13 @@
     "static/js/2.746e7e08.chunk.js": "/static/js/2.746e7e08.chunk.js",
     "static/js/2.746e7e08.chunk.js.map": "/static/js/2.746e7e08.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4804e594abda31b8a95a1bc0f80385aa.js": "/precache-manifest.4804e594abda31b8a95a1bc0f80385aa.js",
+    "precache-manifest.173ff5b3ae87ae41c968bbc6b9561f5f.js": "/precache-manifest.173ff5b3ae87ae41c968bbc6b9561f5f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b6167fd6.chunk.css.map": "/static/css/main.b6167fd6.chunk.css.map",
+    "static/css/main.f650d906.chunk.css.map": "/static/css/main.f650d906.chunk.css.map",
     "static/js/2.746e7e08.chunk.js.LICENSE.txt": "/static/js/2.746e7e08.chunk.js.LICENSE.txt",
     "static/media/800px_COLOURBOX25316311.jpg": "/static/media/800px_COLOURBOX25316311.15c05b72.jpg",
     "static/media/Calacatta.jpg": "/static/media/Calacatta.bc52f39c.jpg",
+    "static/media/index.css": "/static/media/CaviarDreams-webfont.5ac122f3.woff",
     "static/media/Eric.png": "/static/media/Eric.2864ab5d.png",
     "static/media/Felix.png": "/static/media/Felix.367bb124.png",
     "static/media/John.png": "/static/media/John.7b180c0f.png",
@@ -41,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.0312cf06.js",
     "static/js/2.746e7e08.chunk.js",
-    "static/css/main.b6167fd6.chunk.css",
+    "static/css/main.f650d906.chunk.css",
     "static/js/main.6e8823c7.chunk.js"
   ]
 }
