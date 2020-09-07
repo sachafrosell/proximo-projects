@@ -69,7 +69,7 @@ function LandingPageHeader() {
           ref={pageHeader}
         ></div>
         <div className="content-left">
-          <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
+          {dimensions.width > 500 ? <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
             <span> <h1 className="title" style={{textAlign: "right", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
               <span style={{fontWeight: "900"}}>
                 PROXIMO
@@ -90,11 +90,37 @@ function LandingPageHeader() {
 
             </h1>
 
-          </span> 
+          </span>
 
 
 
-          </Container>
+        </Container> : <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "5px", marginRight: "50px"}}>
+          <span> <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
+            <span style={{fontWeight: "900"}}>
+              PROXIMO
+            </span>
+            <span> </span>
+            <span style={{fontWeight: "900"}}>
+              PROJECTS
+            </span>
+            <span> </span>
+            <br></br>
+            <p></p>
+            <span >
+              LOUISE FINLAY
+            </span>
+
+
+
+
+          </h1>
+
+        </span>
+
+
+
+        </Container>}
+
         </div>
       </div>
     </>

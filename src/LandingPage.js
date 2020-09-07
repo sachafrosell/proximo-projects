@@ -12,6 +12,8 @@ import Team from './Team.js'
 import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
 import WorkGallery from './WorkGallery.js'
+import LazyLoad from 'react-lazy-load';
+
 
 
 // reactstrap ./components
@@ -55,6 +57,24 @@ function LandingPage() {
 
   const [loading, setLoading] = React.useState(false);
 
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
+
 
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -73,18 +93,26 @@ function LandingPage() {
 
       {top}
 
-
+      {dimensions.width > 500 ?
       <ExamplesNavbar forceUpdate={top()}/>
+      : ""}
+
       <div className="wrapper">
         <LandingPageHeader/>
 
       </div>
+      <LazyLoad >
       <About />
+      </LazyLoad>
+      {dimensions.width > 500 ?
+        <LazyLoad offsetTop={400}>
 
-      <WorkGallery />
+        <WorkGallery />
+        </LazyLoad> : ""
+      }
+
 
       <Competition />
-
 
       <InfoFooter />
 

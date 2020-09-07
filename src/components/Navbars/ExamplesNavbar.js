@@ -139,7 +139,8 @@ function ExamplesNavbar(props) {
               PROXIMO PROJECTS
             </div>
           </NavbarBrand> : ""}
-          {colors.bCol == "white" ? <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
+
+          {colors.bCol == "white" && dimensions.width > 450 ? <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
 
             <NavItem>
               <Link to="/">
@@ -183,7 +184,7 @@ function ExamplesNavbar(props) {
                 }} > CONTACT </Button>
               </Link>
             </NavItem>
-          </Nav> : <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
+          </Nav> : dimensions.width > 450 && colors.bCol != "white" ? <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
 
             <NavItem>
               <Link to="/">
@@ -227,7 +228,7 @@ function ExamplesNavbar(props) {
                 }} > CONTACT </Button>
               </Link>
             </NavItem>
-          </Nav>}
+          </Nav> : ""}
 
 
         </div>

@@ -14,6 +14,7 @@ import {
   CardBody,
   CardText
 } from "reactstrap";
+import { Link} from "react-router-dom"
 
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import ContentCard from "./ContentCard.js"
@@ -22,7 +23,7 @@ import Popup from "./Popup.js"
 import DarkFooter from "./components/Footers/DarkFooter.js";
 import store from './Store.js'
 
-import Sketch from './assets/img/sketch.png'
+import Sketch from './assets/img/louise_homeimg.jpg'
 import TukTukImg2 from './assets/img/tuk-tuk22.jpg'
 
 
@@ -66,6 +67,24 @@ function About() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
   return (
     <>
 
@@ -126,26 +145,33 @@ function About() {
                     We're excited to meet you!
 
                   </h5>
-                  <Button style={ButtonStyle}>
-                    CONTACT US
-                  </Button>
+                  <Link
+                  to="/contact">
+                    <Button style={ButtonStyle}>
+                      CONTACT US
+                    </Button>
+                  </Link>
+
                 </div>
 
               </Col>
-              <Col style={{position: "relative"}}>
-                <img
+              {dimensions.width > 500 ?
+                <Col style={{position: "relative"}}>
+                  <img
 
-                  src={Sketch}
-                  style={{
-                    paddingTop: "50px",
-                    verticalAlign: "middle",
+                    src={Sketch}
+                    style={{
+                      paddingTop: "50px",
+                      verticalAlign: "middle",
 
 
-                  }}
-                >
+                    }}
+                  >
 
-                </img>
-              </Col>
+                  </img>
+                </Col> : ""
+                }
+
 
 
 

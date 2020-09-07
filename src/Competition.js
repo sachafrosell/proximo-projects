@@ -48,6 +48,24 @@ const ButtonStyle = {
 
 function Competition() {
 
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
+
 
   return (
     <>
@@ -68,9 +86,20 @@ function Competition() {
         </div>
       </div>
       <div style={{paddingBottom: "100px"}}>
+        {dimensions.width > 500 ?
+          <>
+          <div class="powr-instagram-feed" id="f7665533_1597589411"></div>
+          <script src="https://www.powr.io/powr.js?platform=react"></script>
+          </>
 
-        <div class="powr-instagram-feed" id="f7665533_1597589411"></div>
+
+        :
+        <>
+        <div class="powr-instagram-feed" id="87c13a8d_1597590537"></div>
         <script src="https://www.powr.io/powr.js?platform=react"></script>
+        </>
+    }
+
       </div>
 
     </>
