@@ -95,9 +95,10 @@ function LandingPage() {
 
       {top}
 
-
-      <ExamplesNavbar />
-
+      {dimensions.width > 1000 ?
+      <ExamplesNavbar/>
+      :
+    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
 
       <div className="wrapper">
         <LandingPageHeader/>
