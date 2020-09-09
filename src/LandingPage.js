@@ -96,7 +96,8 @@ function LandingPage() {
       {top}
 
 
-    <SideBar pageWrapId={"page-wrap"} />
+      <ExamplesNavbar forceUpdate={top()}/>
+
 
       <div className="wrapper">
         <LandingPageHeader/>
