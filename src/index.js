@@ -33,29 +33,6 @@ function LoadingMessage() {
   );
 }
 
-function Load1() {
-  return (
-    <Switch>
-      <Route
-        path="/home"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/about"
-        render={(props) => <PillarPage {...props} />}
-      />
-
-
-      <Route
-        path="/contact"
-        render={(props) => <Contact {...props} />}
-      />
-
-
-      <Redirect from="/" to="/home" />
-    </Switch>
-  )
-}
 
 
 

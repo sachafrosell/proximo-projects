@@ -98,7 +98,7 @@ function LandingPage() {
       {dimensions.width > 994 ?
       <ExamplesNavbar forceUpdate={top()}/>
       :
-    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
+    ""}
 
       <div className="wrapper">
         <LandingPageHeader/>
