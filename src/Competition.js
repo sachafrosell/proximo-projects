@@ -85,6 +85,8 @@ function Competition() {
           }}></p>
         </div>
       </div>
+
+
       <div style={{paddingBottom: "100px"}}>
         {dimensions.width > 500 ?
           <>

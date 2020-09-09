@@ -33,10 +33,8 @@ function LoadingMessage() {
   );
 }
 
-
-ReactDOM.render(
-  <HashRouter>
-
+function Load1() {
+  return (
     <Switch>
       <Route
         path="/home"
@@ -56,6 +54,34 @@ ReactDOM.render(
 
       <Redirect from="/" to="/home" />
     </Switch>
+  )
+}
+
+
+
+ReactDOM.render(
+  <HashRouter>
+    <Switch>
+      <Route
+        path="/home"
+        render={(props) => <LandingPage {...props} />}
+      />
+      <Route
+        path="/about"
+        render={(props) => <PillarPage {...props} />}
+      />
+
+
+      <Route
+        path="/contact"
+        render={(props) => <Contact {...props} />}
+      />
+
+
+      <Redirect from="/" to="/home" />
+    </Switch>
+
+
 
 
   </HashRouter>,

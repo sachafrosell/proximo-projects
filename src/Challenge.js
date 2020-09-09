@@ -185,8 +185,9 @@ function Challenge() {
 
           </Col>
 
-        </Row> : <Row>
-          <Col xs={12} style={{paddingLeft: "100px", paddingTop: "50px", paddingRight: "100px"}}>
+        </Row> :
+          <div style={{paddingLeft: "50px", paddingRight: "50px", paddingTop: "50px"}}>
+
             <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
               Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
             </h5>
@@ -199,20 +200,18 @@ function Challenge() {
             <h5 title="Louise studied interior design at Chelsea School of Art in London and at the University of Miami.">
               Louise studied interior design at Chelsea School of Art in London and at the University of Miami.
             </h5>
-          </Col>
-          <Col xs={3}>
-          </Col>
 
-          <Col>
+
+
+
             <img src={Louise}
               style={{maxWidth: "100%", paddingTop: "20px", paddingBottom: "50px"}}/>
+          </div>
 
 
-          </Col>
-          <Col xs={3}>
-          </Col>
 
-        </Row>}
+
+      }
 
 
       </div>

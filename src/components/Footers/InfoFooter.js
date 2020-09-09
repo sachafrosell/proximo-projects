@@ -42,7 +42,7 @@ function InfoFooter() {
   return (
     <div >
 
-    {dimensions.width > 500 ?
+    {dimensions.width > 1000 ?
       <div style={{background: "#cdcdcd", color: "black"}}>
         <div style={{paddingLeft: "50px"}}>
           <Row  style={{paddingTop: "20px", paddingBottom: "20px"}}>

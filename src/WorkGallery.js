@@ -27,6 +27,11 @@ import store from './Store.js'
 import { Document, Page, pdfjs } from 'react-pdf';
 import Background from './assets/img/Calacatta.jpg';
 import { Parallax } from 'react-scroll-parallax';
+import LazyLoad from 'react-lazy-load';
+
+//backgroundimage
+// backgroundImage: "url(" + Background + ")", backgroundSize: "cover"
+
 
 
 import finalPresentation from './assets/sherman-residence.pdf'
@@ -255,20 +260,141 @@ function About() {
 
   return (
     <>
-      <div
+    {dimensions.width > 1000 ? <div
+      style=
+      {{textAlign: "center",
+          paddingBottom: "125px",
+          paddingTop: "75px",
+      background: "#cdcdcd" }}
+
+    >
+
+      <h1 title="Projects" style={{width: "400px", margin: "auto", padding: "10px"}}>
+        OUR PROJECTS
+      </h1>
+      <div style={{justifyContent: "center"}}>
+        <p style={{
+
+            margin: "auto",
+            marginTop: "10px",
+            marginBottom: "50px",
+            display: "block",
+            maxWidth: "50px",
+
+        }}></p>
+      </div>
+      <Row>
+        <Col>
+          <div style={{backgroundColor: "white", margin: "left", marginLeft: "50px", maxWidth: dimensions.width / 2.3}}>
+
+            <Carousel activeIndex={activeIndex} next={next} previous={previous} >
+              <CarouselIndicators
+                items={items}
+                activeIndex={activeIndex}
+                onClickHandler={goToIndex}
+              />
+              {items.map(item => {
+                return (
+                  <CarouselItem
+                    onExiting={onExiting}
+                    onExited={onExited}
+                    key={item.src}
+                  >
+
+                      <img src={ImgArr[item.page]}>
+
+                      </img>
+
+
+
+                      <div className="carousel-caption d-none d-md-block">
+
+                      </div>
+                    </CarouselItem>
+                  );
+                })}
+                <a
+                  className="carousel-control-prev"
+
+                  data-slide="prev"
+                  href="#pablo"
+                  onClick={e => {
+                    e.preventDefault();
+                    previous();
+                  }}
+                  role="button"
+                >
+                  <i className="now-ui-icons arrows-1_minimal-left" ></i>
+                </a>
+                <a
+                  className="carousel-control-next"
+
+                  data-slide="next"
+                  href="#pablo"
+                  onClick={e => {
+                    e.preventDefault();
+                    next();
+                  }}
+                  role="button"
+                >
+                  <i className="now-ui-icons arrows-1_minimal-right"></i>
+                </a>
+              </Carousel>
+
+            </div>
+          </Col>
+          <Col >
+            <div style={{paddingRight: '50px'}}>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px", paddingTop: "10px"}}>
+
+
+              The Sherman family approached Louise to help them with the transition to their next chapter – a large, light-filled two-bed, two and a half bath condo on Miami Beach.
+
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+              The brief for the project was to create a contemporary yet comfortable space where the family could entertain friends, explore their passion for cooking, spend time together and show off their collection of art, wine, books and mid-century modern and contemporary pieces collected over the years and through their travels.
+
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+
+              They also needed a space that their teenage daughter Sophia could call her own – a space tailored to her aesthetic where she could spend itme with her friends, do her studies and that would provide her with the privacy a teenage girl needs.
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+
+              In terms of specific design asks, the Sherman’s told Louise that they love bright colors and natural materials and that they needed lots of storage – both hidden and open.
+              </h5>
+            </div>
+
+          </Col>
+        </Row>
+
+      </div> : <div
         style=
         {{textAlign: "center",
             paddingBottom: "125px",
             paddingTop: "75px",
-        backgroundImage: "url(" + Background + ")", backgroundSize: "cover"}}
+        background: "#cdcdcd" }}
 
       >
+
         <h1 title="Projects" style={{width: "400px", margin: "auto", padding: "10px"}}>
           OUR PROJECTS
         </h1>
         <div style={{justifyContent: "center"}}>
           <p style={{
-
+              border: "0.5px solid black",
               margin: "auto",
               marginTop: "10px",
               marginBottom: "50px",
@@ -277,9 +403,44 @@ function About() {
 
           }}></p>
         </div>
-        <Row>
-          <Col>
-            <div style={{backgroundColor: "black", margin: "left", marginLeft: "50px", maxWidth: dimensions.width / 2.3}}>
+
+
+            <div style={{paddingRight: '50px', paddingLeft: "50px", paddingBottom: "75px"}}>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px", paddingTop: "10px"}}>
+
+
+              The Sherman family approached Louise to help them with the transition to their next chapter – a large, light-filled two-bed, two and a half bath condo on Miami Beach.
+
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+              The brief for the project was to create a contemporary yet comfortable space where the family could entertain friends, explore their passion for cooking, spend time together and show off their collection of art, wine, books and mid-century modern and contemporary pieces collected over the years and through their travels.
+
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+
+              They also needed a space that their teenage daughter Sophia could call her own – a space tailored to her aesthetic where she could spend itme with her friends, do her studies and that would provide her with the privacy a teenage girl needs.
+
+              </h5>
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+
+              In terms of specific design asks, the Sherman’s told Louise that they love bright colors and natural materials and that they needed lots of storage – both hidden and open.
+              </h5>
+            </div>
+
+
+
+            <div style={{backgroundColor: "white", marginLeft: "50px", marginRight: '50px'}}>
 
               <Carousel activeIndex={activeIndex} next={next} previous={previous} >
                 <CarouselIndicators
@@ -294,9 +455,12 @@ function About() {
                       onExited={onExited}
                       key={item.src}
                     >
-                      <img src={ImgArr[item.page]}>
 
-                      </img>
+                        <img src={ImgArr[item.page]}>
+
+                        </img>
+
+
 
                         <div className="carousel-caption d-none d-md-block">
 
@@ -333,45 +497,12 @@ function About() {
                 </Carousel>
 
               </div>
-            </Col>
-            <Col >
-              <div style={{paddingRight: '50px'}}>
-                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#6d747c", fontWeight: "500px", paddingTop: "10px"}}>
-
-
-                The Sherman family approached Louise to help them with the transition to their next chapter – a large, light-filled two-bed, two and a half bath condo on Miami Beach.
-
-
-                </h5>
-                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#6d747c", fontWeight: "500px"}}>
-
-
-
-                The brief for the project was to create a contemporary yet comfortable space where the family could entertain friends, explore their passion for cooking, spend time together and show off their collection of art, wine, books and mid-century modern and contemporary pieces collected over the years and through their travels.
-
-
-                </h5>
-                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#6d747c", fontWeight: "500px"}}>
 
 
 
 
-                They also needed a space that their teenage daughter Sophia could call her own – a space tailored to her aesthetic where she could spend itme with her friends, do her studies and that would provide her with the privacy a teenage girl needs.
+        </div>}
 
-                </h5>
-                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#6d747c", fontWeight: "500px"}}>
-
-
-
-
-                In terms of specific design asks, the Sherman’s told Louise that they love bright colors and natural materials and that they needed lots of storage – both hidden and open.
-                </h5>
-              </div>
-
-            </Col>
-          </Row>
-
-        </div>
 
 
 

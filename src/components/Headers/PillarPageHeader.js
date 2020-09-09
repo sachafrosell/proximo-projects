@@ -1,4 +1,6 @@
 import React from "react";
+import FadeIn from 'react-fade-in';
+
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
@@ -69,17 +71,34 @@ function PillarPageHeader() {
           }}
           ref={pageHeader}
         ></div>
-        <div className="content-left">
-          <Container style={{padding: "0px", paddingTop: "250px"}}>
-            <h1 className="title" style={{textAlign: "left", fontSize: "60px", letterSpacing: "5px", fontWeight: "900"}}>
-              <span >
-                 MEET LOUISE
-              </span>
-            </h1>
+      {dimensions.width > 1000 ? <div className="content-left">
+        <Container style={{padding: "0px", paddingTop: "250px"}}>
+          <h1 className="title" style={{textAlign: "left", fontSize: "60px", letterSpacing: "5px", fontWeight: "900"}}>
 
-          </Container>
+            <span >
+               MEET LOUISE
+            </span>
 
-        </div>
+          </h1>
+
+        </Container>
+
+      </div> :
+      <div className="content-center">
+        <Container style={{padding: "0px", paddingTop: "100px"}}>
+          <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "900"}}>
+            <FadeIn delay='500' transitionDuration='1000'>
+            <span >
+               MEET LOUISE
+            </span>
+            </FadeIn>
+          </h1>
+
+        </Container>
+
+      </div>
+    }
+
       </div>
     </>
   );

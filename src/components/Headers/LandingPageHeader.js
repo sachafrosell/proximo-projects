@@ -1,5 +1,7 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import FadeIn from 'react-fade-in';
+
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
@@ -69,21 +71,27 @@ function LandingPageHeader() {
           ref={pageHeader}
         ></div>
         <div className="content-left">
-          {dimensions.width > 500 ? <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
+          {dimensions.width > 700 ? <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
             <span> <h1 className="title" style={{textAlign: "right", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
-              <span style={{fontWeight: "900"}}>
-                PROXIMO
-              </span>
-              <span> </span>
-              <span style={{fontWeight: "900"}}>
-                PROJECTS
-              </span>
-              <span> </span>
-              <br></br>
-              <p></p>
-              <span >
-                LOUISE FINLAY
-              </span>
+              <FadeIn delay='500' transitionDuration='1000'>
+                <span>
+            <span style={{fontWeight: "900"}}>
+              PROXIMO
+            </span>
+            <span> </span>
+            <span style={{fontWeight: "900"}}>
+              PROJECTS
+            </span>
+          </span>
+
+
+            <p></p>
+            <span >
+              LOUISE FINLAY
+            </span>
+
+
+</FadeIn>
 
 
 
@@ -94,8 +102,12 @@ function LandingPageHeader() {
 
 
 
-        </Container> : <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "5px", marginRight: "50px"}}>
-          <span> <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
+        </Container> : <Container style={{paddingTop: "200px", paddingRight: "0px", paddingLeft: "5px", marginRight: "50px"}}>
+          <span>
+
+            <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
+              <FadeIn delay='500' transitionDuration='1000'>
+                <span>
             <span style={{fontWeight: "900"}}>
               PROXIMO
             </span>
@@ -103,17 +115,19 @@ function LandingPageHeader() {
             <span style={{fontWeight: "900"}}>
               PROJECTS
             </span>
-            <span> </span>
-            <br></br>
+          </span>
+
+
             <p></p>
             <span >
               LOUISE FINLAY
             </span>
 
 
-
+</FadeIn>
 
           </h1>
+
 
         </span>
 

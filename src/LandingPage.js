@@ -95,7 +95,7 @@ function LandingPage() {
 
       {top}
 
-      {dimensions.width > 500 ?
+      {dimensions.width > 994 ?
       <ExamplesNavbar forceUpdate={top()}/>
       :
     <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
@@ -107,12 +107,11 @@ function LandingPage() {
       <LazyLoad >
       <About />
       </LazyLoad>
-      {dimensions.width > 500 ?
+
         <LazyLoad offsetTop={400}>
 
         <WorkGallery />
-        </LazyLoad> : ""
-      }
+        </LazyLoad>
 
 
       <Competition />

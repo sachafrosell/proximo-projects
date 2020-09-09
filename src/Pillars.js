@@ -1,4 +1,5 @@
 import React from 'react'
+import FadeIn from 'react-fade-in'
 
 import {
   Button,
@@ -83,8 +84,9 @@ constructor(props){
   render() {
     return (
       <>
+      <FadeIn delay='1500' transitionDuration='1000'>
         <Challenge />
-
+    </FadeIn>
       </>
     );
   }

@@ -54,17 +54,43 @@ function ContactHeader() {
       };
     }
   });
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
   return (
     <>
       <div className="page-header page-header-small">
-        <div
+        {dimensions.width > 1000 ? <div
           className="page-header-image"
           style={{
             backgroundImage: "url(" + require("./assets/img/miami-skyline2.jpg") + ")",
             top: "120px"
           }}
           ref={pageHeader}
-        ></div>
+        ></div> : <div
+          className="page-header-image"
+          style={{
+            backgroundImage: "url(" + require("./assets/img/miami-skyline2.jpg") + ")",
+            top: "0px"
+          }}
+          ref={pageHeader}
+        ></div>}
+
         <Container>
 
           <div style={{textAlign: "left", paddingTop: "80px", paddingLeft: "20px"}}>
