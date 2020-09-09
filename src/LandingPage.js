@@ -13,8 +13,7 @@ import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
 import WorkGallery from './WorkGallery.js'
 import LazyLoad from 'react-lazy-load';
-import SideBar from "./sidebar";
-import './burgerstyle.css'
+
 
 
 
@@ -95,7 +94,7 @@ function LandingPage() {
 
       {top}
 
-
+    
       <ExamplesNavbar forceUpdate={top()}/>
 
 

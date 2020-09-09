@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import LogoLight from "../../assets/img/proximo-logo.PNG";
 import LogoDark from "../../assets/img/proximo-logo.PNG";
 import store from '../../Store.js';
+import SideBar from "../../sidebar";
+import '../../burgerstyle.css';
+
 // reactstrap components
 import {
   Collapse,
@@ -116,125 +119,125 @@ function ExamplesNavbar(props) {
 
   return (
     <>
+    {dimensions.width < 1000 ? <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} /> : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
-      <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
+      <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
 
-        <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
+        <NavbarBrand style={{padding: "0px", paddingLeft: "20px"}}>
+          <Link to="/">
+            <img
+              src={LogoLight}
+              style={{
+                  width: "110px",
+                  position: "10px"
+              }}
+            >
+            </img>
+          </Link>
+        </NavbarBrand>
+        {colors.bCol == "black" && dimensions.width > 1000 ? <NavbarBrand>
+          <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
+            PROXIMO PROJECTS
+          </div>
+        </NavbarBrand> : ""}
 
-          <NavbarBrand style={{padding: "0px", paddingLeft: "20px"}}>
+        {colors.bCol == "white" && dimensions.width > 450 ? <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
+
+          <NavItem>
             <Link to="/">
-              <img
-                src={LogoLight}
-                style={{
-                    width: "110px",
-                    position: "10px"
-                }}
-              >
-              </img>
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > HOME </Button>
             </Link>
-          </NavbarBrand>
-          {colors.bCol == "black" && dimensions.width > 1000 ? <NavbarBrand>
-            <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
-              PROXIMO PROJECTS
-            </div>
-          </NavbarBrand> : ""}
+          </NavItem>
+          <NavItem>
+            <Link to="/about">
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > ABOUT </Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/contact">
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > CONTACT </Button>
+            </Link>
+          </NavItem>
+        </Nav> : dimensions.width > 450 && colors.bCol != "white" ? <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
 
-          {colors.bCol == "white" && dimensions.width > 450 ? <Nav style={{float: "right", marginRight: -dimensions.width +200}}>
-
-            <NavItem>
-              <Link to="/">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > HOME </Button>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/about">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > ABOUT </Button>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/contact">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > CONTACT </Button>
-              </Link>
-            </NavItem>
-          </Nav> : dimensions.width > 450 && colors.bCol != "white" ? <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
-
-            <NavItem>
-              <Link to="/">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > HOME </Button>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/about">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > ABOUT </Button>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/contact">
-                <Button style={{
-                    background: "none",
-                    color: colors.bCol,
-                    position: "relative",
-                    float: "right",
-                    fontSize: "15px",
-                    borderRadius: "0px",
-                    padding: "15px",
-                    marginTop: "20px"
-                }} > CONTACT </Button>
-              </Link>
-            </NavItem>
-          </Nav> : ""}
+          <NavItem>
+            <Link to="/">
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > HOME </Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/about">
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > ABOUT </Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/contact">
+              <Button style={{
+                  background: "none",
+                  color: colors.bCol,
+                  position: "relative",
+                  float: "right",
+                  fontSize: "15px",
+                  borderRadius: "0px",
+                  padding: "15px",
+                  marginTop: "20px"
+              }} > CONTACT </Button>
+            </Link>
+          </NavItem>
+        </Nav> : ""}
 
 
-        </div>
+      </div>
 
 
-      </Navbar>
+    </Navbar>}
+
     </>
   );
 }
