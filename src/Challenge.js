@@ -186,7 +186,7 @@ function Challenge() {
           </Col>
 
         </Row> :
-          <div style={{paddingLeft: "50px", paddingRight: "50px", paddingTop: "50px"}}>
+          <div style={{paddingLeft: "50px", paddingRight: "50px", paddingTop: "100px"}}>
 
             <h5 title="Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next">
               Louise Finlay started The Proximo Project to help her clients get excited for what’s coming next. There’s an energy that comes from that journey, which is captured in her designs, creating dynamic spaces that help her clients make the transition from one home to the next.
@@ -205,7 +205,7 @@ function Challenge() {
 
 
             <img src={Louise}
-              style={{maxWidth: "100%", paddingTop: "20px", paddingBottom: "50px"}}/>
+              style={{maxWidth: "100%", paddingTop: "20px", paddingBottom: "100px"}}/>
           </div>
 
 
