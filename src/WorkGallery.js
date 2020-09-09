@@ -389,8 +389,16 @@ function About() {
 
       >
 
-        <h1 title="Projects" style={{width: "400px", margin: "auto", padding: "10px"}}>
-          OUR PROJECTS
+        <h1 title="Projects" style={{ margin: "auto", padding: "10px"}}>
+          <span>
+            OUR
+          </span>
+          <p></p>
+          <span>
+            PROJECTS
+          </span>
+
+
         </h1>
         <div style={{justifyContent: "center"}}>
           <p style={{
