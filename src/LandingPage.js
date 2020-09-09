@@ -96,7 +96,7 @@ function LandingPage() {
       {top}
 
 
-    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+    <SideBar pageWrapId={"page-wrap"} />
 
       <div className="wrapper">
         <LandingPageHeader/>
