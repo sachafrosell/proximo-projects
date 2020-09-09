@@ -74,11 +74,11 @@ function PillarPageHeader() {
       {dimensions.width > 1000 ? <div className="content-left">
         <Container style={{padding: "0px", paddingTop: "250px"}}>
           <h1 className="title" style={{textAlign: "left", fontSize: "60px", letterSpacing: "5px", fontWeight: "900"}}>
-
+            <FadeIn delay='500' transitionDuration='1000'>
             <span >
                MEET LOUISE
             </span>
-
+          </FadeIn>
           </h1>
 
         </Container>
