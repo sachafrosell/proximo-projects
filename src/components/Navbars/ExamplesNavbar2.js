@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoLight from "../../assets/img/proximo-logo.PNG";
 import LogoDark from "../../assets/img/proximo-logo.PNG";
+import SideBar from "../../sidebar";
+import '../../burgerstyle.css';
+import { slide as Menu } from "react-burger-menu";
 
 // reactstrap components
 import {
