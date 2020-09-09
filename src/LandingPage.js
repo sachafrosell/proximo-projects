@@ -105,14 +105,11 @@ function LandingPage() {
         <LandingPageHeader/>
 
       </div>
-      <LazyLoad >
-      <About />
-      </LazyLoad>
 
-        <LazyLoad offsetTop={400}>
+      <About />
+
 
         <WorkGallery />
-        </LazyLoad>
 
 
       <Competition />
