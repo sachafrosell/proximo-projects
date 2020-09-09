@@ -95,10 +95,9 @@ function LandingPage() {
 
       {top}
 
-      {dimensions.width > 994 ?
-      <ExamplesNavbar forceUpdate={top()}/>
-      :
-    ""}
+
+      <ExamplesNavbar />
+
 
       <div className="wrapper">
         <LandingPageHeader/>
