@@ -121,6 +121,11 @@ function ExamplesNavbar(props) {
   return (
     <>
     {dimensions.width < 1000 ?
+      <>
+
+
+
+
       <Menu {...props}>
         <Link to='/home'>
           <a className="menu-item" href="/">
@@ -141,6 +146,8 @@ function ExamplesNavbar(props) {
         </Link>
 
       </Menu>
+    
+      </>
        : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
 

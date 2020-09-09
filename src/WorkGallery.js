@@ -323,6 +323,8 @@ function About() {
                     previous();
                   }}
                   role="button"
+                  style={{marginLeft: "-50px", opacity: "60%"}}
+
                 >
                   <i className="now-ui-icons arrows-1_minimal-left" ></i>
                 </a>
@@ -336,6 +338,7 @@ function About() {
                     next();
                   }}
                   role="button"
+                  style={{marginRight: "-50px", opacity: "60%"}}
                 >
                   <i className="now-ui-icons arrows-1_minimal-right"></i>
                 </a>
@@ -486,6 +489,7 @@ function About() {
                       previous();
                     }}
                     role="button"
+                    style={{marginLeft: "-50px", opacity: "80%"}}
                   >
                     <i className="now-ui-icons arrows-1_minimal-left" ></i>
                   </a>
@@ -499,6 +503,7 @@ function About() {
                       next();
                     }}
                     role="button"
+                    style={{marginRight: "-50px", opacity: "80%"}}
                   >
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                   </a>
