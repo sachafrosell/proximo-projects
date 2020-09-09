@@ -30,6 +30,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 
 import finalPresentation from './assets/sherman-residence.pdf'
+import ImgArr from './sherman-residence.js'
 
 const titleStyle = {
    fontWeight: "900px",
@@ -39,6 +40,11 @@ const titleStyle = {
 }
 
 const items = [
+  {
+    page: 0,
+    altText: "Page 0",
+    caption: "Page 0"
+  },
   {
     page: 1,
     altText: "Page 1",
@@ -150,12 +156,15 @@ const items = [
   altText: "Page 22",
   caption: "Page 22"
 },
-{
-  page: 23,
-  altText: "Page 23",
-  caption: "Page 23"
-}
+
 ];
+
+//<Document file={finalPresentation} style={{borderRadius: "0px"}}>
+//  <Page pageNumber={item.page} width={dimensions.width/2.29}/>
+//</Document>
+
+
+
 
 
 
@@ -247,18 +256,18 @@ function About() {
   return (
     <>
       <div
-          style=
-          {{textAlign: "center",
+        style=
+        {{textAlign: "center",
             paddingBottom: "125px",
             paddingTop: "75px",
-          backgroundImage: "url(" + Background + ")", backgroundSize: "cover"}}
+        backgroundImage: "url(" + Background + ")", backgroundSize: "cover"}}
 
-        >
-          <h1 title="Projects" style={{width: "400px", margin: "auto", padding: "10px"}}>
-            OUR PROJECTS
-          </h1>
-          <div style={{justifyContent: "center"}}>
-            <p style={{
+      >
+        <h1 title="Projects" style={{width: "400px", margin: "auto", padding: "10px"}}>
+          OUR PROJECTS
+        </h1>
+        <div style={{justifyContent: "center"}}>
+          <p style={{
 
               margin: "auto",
               marginTop: "10px",
@@ -266,28 +275,29 @@ function About() {
               display: "block",
               maxWidth: "50px",
 
-            }}></p>
-          </div>
-          <Row>
-            <Col>
-              <div style={{backgroundColor: "black", margin: "left", marginLeft: "50px", maxWidth: dimensions.width / 2.3}}>
+          }}></p>
+        </div>
+        <Row>
+          <Col>
+            <div style={{backgroundColor: "black", margin: "left", marginLeft: "50px", maxWidth: dimensions.width / 2.3}}>
 
-                <Carousel activeIndex={activeIndex} next={next} previous={previous} >
-                  <CarouselIndicators
-                    items={items}
-                    activeIndex={activeIndex}
-                    onClickHandler={goToIndex}
-                  />
-                  {items.map(item => {
-                    return (
-                      <CarouselItem
-                        onExiting={onExiting}
-                        onExited={onExited}
-                        key={item.src}
-                      >
-                        <Document file={finalPresentation} style={{borderRadius: "0px"}}>
-                          <Page pageNumber={item.page} width={dimensions.width/2.29}/>
-                        </Document>
+              <Carousel activeIndex={activeIndex} next={next} previous={previous} >
+                <CarouselIndicators
+                  items={items}
+                  activeIndex={activeIndex}
+                  onClickHandler={goToIndex}
+                />
+                {items.map(item => {
+                  return (
+                    <CarouselItem
+                      onExiting={onExiting}
+                      onExited={onExited}
+                      key={item.src}
+                    >
+                      <img src={ImgArr[item.page]}>
+
+                      </img>
+
                         <div className="carousel-caption d-none d-md-block">
 
                         </div>

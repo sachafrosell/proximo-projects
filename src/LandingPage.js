@@ -13,6 +13,8 @@ import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
 import WorkGallery from './WorkGallery.js'
 import LazyLoad from 'react-lazy-load';
+import SideBar from "./sidebar";
+import './burgerstyle.css'
 
 
 
@@ -95,7 +97,8 @@ function LandingPage() {
 
       {dimensions.width > 500 ?
       <ExamplesNavbar forceUpdate={top()}/>
-      : ""}
+      :
+    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
 
       <div className="wrapper">
         <LandingPageHeader/>

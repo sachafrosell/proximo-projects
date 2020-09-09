@@ -7,6 +7,8 @@ import Popup from "./Popup.js"
 import store from './Store.js'
 import TukTukImg2 from './assets/img/tuk-tuk2.jpg'
 import Team from './Team.js'
+import SideBar from "./sidebar";
+import './burgerstyle.css'
 
 // reactstrap ./components
 import {
@@ -59,6 +61,24 @@ function Contact () {
     };
   }, []);
 
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
+
 
 
 const buttonControl = () => {
@@ -81,7 +101,10 @@ const buttonControl = () => {
       return (
         <>
 
-          <ExamplesNavbar2 />
+        {dimensions.width > 500 ?
+        <ExamplesNavbar2 />
+        :
+      <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
           <ContactHeader />
 
           <Container>

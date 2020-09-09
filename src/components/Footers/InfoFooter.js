@@ -40,7 +40,7 @@ function InfoFooter() {
   })
 
   return (
-    <div>
+    <div >
 
     {dimensions.width > 500 ?
       <div style={{background: "#cdcdcd", color: "black"}}>
@@ -137,7 +137,7 @@ function InfoFooter() {
           </Row>
         </div>
       </div>
-      : <div style={{background: "#cdcdcd", color: "black"}}>
+      : <div style={{background: "#cdcdcd", color: "black", paddingLeft: "10px"}}>
         <div >
           <Row  style={{paddingTop: "20px", paddingBottom: "20px", width: '100%'}}>
             <Col  md="auto">

@@ -11,6 +11,9 @@ import Overview from './Overview.js'
 import Team from './Team.js'
 import InfoFooter from "./components/Footers/InfoFooter.js"
 import Pillars from './Pillars.js'
+import SideBar from "./sidebar";
+import './burgerstyle.css'
+
 
 
 // reactstrap ./components
@@ -54,9 +57,30 @@ function PillarPage() {
     };
   }, []);
 
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
+
     return (
       <>
-        <ExamplesNavbar />
+      {dimensions.width > 500 ?
+      <ExamplesNavbar />
+      :
+    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
         <div className="wrapper">
           <PillarPageHeader />
         </div>
