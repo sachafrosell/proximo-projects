@@ -89,12 +89,15 @@ function LandingPage() {
     };
   }, []);
 
+  React.useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, [])
+
+
   return (
     <>
 
-      {top}
 
-    
       <ExamplesNavbar forceUpdate={top()}/>
 
 

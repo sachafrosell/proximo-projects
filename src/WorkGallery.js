@@ -274,7 +274,7 @@ function About() {
       </h1>
       <div style={{justifyContent: "center"}}>
         <p style={{
-
+            border: "0.5px solid black",
             margin: "auto",
             marginTop: "10px",
             marginBottom: "50px",
