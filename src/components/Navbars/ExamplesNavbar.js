@@ -5,6 +5,7 @@ import LogoDark from "../../assets/img/proximo-logo.PNG";
 import store from '../../Store.js';
 import SideBar from "../../sidebar";
 import '../../burgerstyle.css';
+import { slide as Menu } from "react-burger-menu";
 
 // reactstrap components
 import {
@@ -119,7 +120,28 @@ function ExamplesNavbar(props) {
 
   return (
     <>
-    {dimensions.width < 1000 ? <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} /> : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
+    {dimensions.width < 1000 ?
+      <Menu {...props}>
+        <Link to='/home'>
+          <a className="menu-item" href="/">
+            Home
+          </a>
+        </Link>
+
+        <Link to='/about'>
+          <a className="menu-item" href="/about">
+            About
+          </a>
+        </Link>
+
+        <Link to='/contact'>
+          <a className="menu-item" href="/services">
+            Contact
+          </a>
+        </Link>
+
+      </Menu>
+       : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
 
       <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
