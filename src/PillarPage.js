@@ -77,10 +77,10 @@ function PillarPage() {
 
     return (
       <>
-      {dimensions.width > 994 ?
+
       <ExamplesNavbar />
-      :
-    <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
+
+    
         <div className="wrapper">
           <PillarPageHeader />
         </div>

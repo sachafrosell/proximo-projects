@@ -101,10 +101,9 @@ const buttonControl = () => {
       return (
         <>
 
-        {dimensions.width > 1000 ?
+
         <ExamplesNavbar2 />
-        :
-      <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />}
+
           <ContactHeader />
 
           <Container>

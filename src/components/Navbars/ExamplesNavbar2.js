@@ -46,80 +46,101 @@ function ExamplesNavbar(props) {
 
   return (
     <>
+    {dimensions.width < 1000 ?
+      <Menu {...props}>
+        <Link to='/home'>
+          <a className="menu-item" href="/">
+            Home
+          </a>
+        </Link>
 
-    <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
+        <Link to='/about'>
+          <a className="menu-item" href="/about">
+            About
+          </a>
+        </Link>
 
+        <Link to='/contact'>
+          <a className="menu-item" href="/services">
+            Contact
+          </a>
+        </Link>
 
-      <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
-
-        <NavbarBrand style={{padding: "0px", paddingLeft: "20px"}}>
-          <Link to="/">
-            <img
-              src={LogoLight}
-              style={{
-                  width: "110px",
-                  position: "10px"
-              }}
-            >
-            </img>
-          </Link>
-        </NavbarBrand>
-        <NavbarBrand>
-          <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
-            PROXIMO PROJECTS
-          </div>
-        </NavbarBrand>
-        <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
-
-          <NavItem>
-            <Link to="/">
-              <Button style={{
-                  background: "none",
-                  color: "black",
-                  position: "relative",
-                  float: "right",
-                  fontSize: "15px",
-                  borderRadius: "0px",
-                  padding: "15px",
-                  marginTop: "20px"
-              }} > HOME </Button>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/about">
-              <Button style={{
-                  background: "none",
-                  color: "black",
-                  position: "relative",
-                  float: "right",
-                  fontSize: "15px",
-                  borderRadius: "0px",
-                  padding: "15px",
-                  marginTop: "20px"
-              }} > ABOUT </Button>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/contact">
-              <Button style={{
-                  background: "none",
-                  color: "black",
-                  position: "relative",
-                  float: "right",
-                  fontSize: "15px",
-                  borderRadius: "0px",
-                  padding: "15px",
-                  marginTop: "20px"
-              }} > CONTACT </Button>
-            </Link>
-          </NavItem>
-        </Nav>
+      </Menu>
+       : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
 
-      </div>
+         <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
+
+           <NavbarBrand style={{padding: "0px", paddingLeft: "20px"}}>
+             <Link to="/">
+               <img
+                 src={LogoLight}
+                 style={{
+                     width: "110px",
+                     position: "10px"
+                 }}
+               >
+               </img>
+             </Link>
+           </NavbarBrand>
+           <NavbarBrand>
+             <div style={{textAlign: "left", fontSize: "30px", letterSpacing: "5px", fontWeight: "900", color: "black", opacity: "75%"}}>
+               PROXIMO PROJECTS
+             </div>
+           </NavbarBrand>
+           <Nav style={{float: "right", marginRight: -dimensions.width +200 + offset}}>
+
+             <NavItem>
+               <Link to="/">
+                 <Button style={{
+                     background: "none",
+                     color: "black",
+                     position: "relative",
+                     float: "right",
+                     fontSize: "15px",
+                     borderRadius: "0px",
+                     padding: "15px",
+                     marginTop: "20px"
+                 }} > HOME </Button>
+               </Link>
+             </NavItem>
+             <NavItem>
+               <Link to="/about">
+                 <Button style={{
+                     background: "none",
+                     color: "black",
+                     position: "relative",
+                     float: "right",
+                     fontSize: "15px",
+                     borderRadius: "0px",
+                     padding: "15px",
+                     marginTop: "20px"
+                 }} > ABOUT </Button>
+               </Link>
+             </NavItem>
+             <NavItem>
+               <Link to="/contact">
+                 <Button style={{
+                     background: "none",
+                     color: "black",
+                     position: "relative",
+                     float: "right",
+                     fontSize: "15px",
+                     borderRadius: "0px",
+                     padding: "15px",
+                     marginTop: "20px"
+                 }} > CONTACT </Button>
+               </Link>
+             </NavItem>
+           </Nav>
 
 
-    </Navbar>
+         </div>
+
+
+       </Navbar>}
+
     </>
   );
 }
