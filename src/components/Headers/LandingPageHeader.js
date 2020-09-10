@@ -105,22 +105,12 @@ function LandingPageHeader() {
 
 
 
-        </Container> : <Container style={{paddingTop: "60px", paddingRight: "0px", paddingLeft: "5px", marginRight: "50px"}}>
+        </Container> : <Container style={{paddingTop: "200px", paddingRight: "0px", paddingLeft: "5px", marginRight: "50px"}}>
           <span>
 
             <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
               <FadeIn delay='500' transitionDuration='1000'>
-                <img
-                  src={LogoLight}
-                  style={{
-                      width: "200px",
-                      position: "sticky",
-                      paddingBottom: "35px",
-                      zIndex: "100",
-                      top: "15px",
-                      left: "20px"
-                  }}
-                />
+
                 <span>
             <span style={{fontWeight: "900"}}>
               PROXIMO

@@ -50,26 +50,54 @@ function ExamplesNavbar(props) {
   return (
     <>
     {dimensions.width < 1000 ?
+      <>
+    <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 80}}>
       <Menu {...props}>
         <Link to='/home'>
-          <a className="menu-item" href="/">
+          <a className="menu-item" href="/" style={{color: "black", opacity: '60%'}}>
             Home
           </a>
         </Link>
 
         <Link to='/about'>
-          <a className="menu-item" href="/about">
+          <a className="menu-item" href="/about" style={{color: "black", opacity: '60%'}}>
             About
           </a>
         </Link>
 
         <Link to='/contact'>
-          <a className="menu-item" href="/services">
+          <a className="menu-item" href="/contact" style={{color: "black", opacity: '60%'}}>
             Contact
           </a>
         </Link>
 
       </Menu>
+
+     <div className="navbar-translate" style={{position: "absolute", top: "8px"}}>
+
+       <NavbarBrand style={{padding: "0px"}}>
+         <Link to="/">
+           <img
+             src={LogoLight}
+             style={{
+                 width: "60px",
+                 position: "absolute",
+                 zIndex: "100"
+             }}
+           >
+           </img>
+         </Link>
+       </NavbarBrand>
+
+
+
+     </div>
+
+   </Navbar>
+
+
+
+      </>
        : <Navbar className={"fixed-top " + navbarColor} color="info"  style={{height: 120}}>
 
 
