@@ -100,7 +100,7 @@ function PillarPage() {
     return (
       <>
       {disableScroll.on()}
-      <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none'}}>
+      <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none', touchEvents: 'none'}}>
         <img
           src={LogoLight}
           style={{
