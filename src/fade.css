@@ -1,0 +1,19 @@
+.divStyleActive {
+  position: absolute;
+  background-color: white;
+
+  z-index: 10000;
+  opacity: 0;
+
+      transition: opacity 1s ease-in-out;
+      -webkit-transition-delay: 1.5s;
+      -moz-transition-delay: 1.5s;
+      -o-transition-delay: 1.5s;
+      transition-delay: 1.5s;
+
+}
+
+.divStyle {
+  position: absolute;
+  opacity: 1;
+}

@@ -9,6 +9,9 @@ import TukTukImg2 from './assets/img/tuk-tuk2.jpg'
 import Team from './Team.js'
 import SideBar from "./sidebar";
 import './burgerstyle.css'
+import './fade.css';
+import LogoLight from "./assets/img/proximo-logo.PNG";
+import disableScroll from 'disable-scroll';
 
 // reactstrap ./components
 import {
@@ -79,6 +82,26 @@ function Contact () {
     };
   })
 
+  const [fadeStyle, setFadeStyle] = React.useState({
+    className: "divStyle",
+    count: 0,
+  })
+
+  React.useEffect(() => {
+    if (fadeStyle.count == 0) {
+      setFadeStyle({
+        className: "divStyleActive"
+      })
+    }
+  })
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      disableScroll.off();
+    }, 4000)
+  })
+
+
 
 
 const buttonControl = () => {
@@ -100,7 +123,19 @@ const buttonControl = () => {
 
       return (
         <>
-
+        {disableScroll.on()}
+        <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none'}}>
+          <img
+            src={LogoLight}
+            style={{
+              position: 'absolute',
+              top: ((dimensions.height/2)-100),
+              left: ((dimensions.width/2)-100),
+              width: '200px',
+              height: '200px'
+            }}
+            />
+        </div>
 
         <ExamplesNavbar2 />
 

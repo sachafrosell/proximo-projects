@@ -1,6 +1,8 @@
 import React, { useState, setState } from 'react';
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
+import disableScroll from 'disable-scroll';
+
 
 import store from './Store.js'
 import About from './About.js'
@@ -13,6 +15,10 @@ import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
 import WorkGallery from './WorkGallery.js'
 import LazyLoad from 'react-lazy-load';
+import Fade from 'react-fade-opacity'
+import './fade.css';
+import LogoLight from "./assets/img/proximo-logo.PNG";
+
 
 
 
@@ -42,6 +48,7 @@ const top = () => {
 }
 
 
+
 function useForceUpdate(){
     const [value, setValue] = useState(0); // integer state
     return () => setValue(value => ++value); // update the state to force render
@@ -54,9 +61,26 @@ function LandingPage() {
 
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
-
-
   const [loading, setLoading] = React.useState(false);
+
+  const [fadeStyle, setFadeStyle] = React.useState({
+    className: "divStyle",
+    count: 0,
+  })
+
+  React.useEffect(() => {
+    if (fadeStyle.count == 0) {
+      setFadeStyle({
+        className: "divStyleActive"
+      })
+    }
+  })
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      disableScroll.off();
+    }, 4750)
+  })
 
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
@@ -94,11 +118,27 @@ function LandingPage() {
   }, [])
 
 
+
   return (
     <>
+      {disableScroll.on()}
+      <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none'}}>
+        <img
+          src={LogoLight}
+          style={{
+            position: 'absolute',
+            top: ((dimensions.height/2)-100),
+            left: ((dimensions.width/2)-100),
+            width: '200px',
+            height: '200px'
+          }}
+          />
+      </div>
+
 
 
       <ExamplesNavbar forceUpdate={top()}/>
+
 
 
       <div className="wrapper">

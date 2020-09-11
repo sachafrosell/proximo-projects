@@ -1,5 +1,6 @@
 import React from 'react'
 import FadeIn from 'react-fade-in';
+import LazyLoad from 'react-lazy-load'
 
 import {
   Button,
@@ -95,6 +96,7 @@ function About() {
           <div style={{marginLeft: "50px", marginRight: "50px"}}>
             <Row>
               <Col className="text-left" md="6">
+
                 <div style={{paddingTop: "35px"}}>
                   <h2 title="About">
                     <span style={{fontStyle: "italic", paddingBottom: "10px"}}>
@@ -154,6 +156,7 @@ function About() {
                   </Link>
 
                 </div>
+    
 
               </Col>
               {dimensions.width > 500 ?

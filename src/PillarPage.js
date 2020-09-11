@@ -13,6 +13,9 @@ import InfoFooter from "./components/Footers/InfoFooter.js"
 import Pillars from './Pillars.js'
 import SideBar from "./sidebar";
 import './burgerstyle.css'
+import './fade.css';
+import LogoLight from "./assets/img/proximo-logo.PNG";
+import disableScroll from 'disable-scroll';
 
 
 
@@ -57,6 +60,19 @@ function PillarPage() {
     };
   }, []);
 
+  const [fadeStyle, setFadeStyle] = React.useState({
+    className: "divStyle",
+    count: 0,
+  })
+
+  React.useEffect(() => {
+    if (fadeStyle.count == 0) {
+      setFadeStyle({
+        className: "divStyleActive"
+      })
+    }
+  })
+
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
@@ -75,12 +91,30 @@ function PillarPage() {
     };
   })
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      disableScroll.off();
+    }, 4000)
+  })
+
     return (
       <>
-
+      {disableScroll.on()}
+      <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none'}}>
+        <img
+          src={LogoLight}
+          style={{
+            position: 'absolute',
+            top: ((dimensions.height/2)-100),
+            left: ((dimensions.width/2)-100),
+            width: '200px',
+            height: '200px'
+          }}
+          />
+      </div>
       <ExamplesNavbar />
 
-    
+
         <div className="wrapper">
           <PillarPageHeader />
         </div>

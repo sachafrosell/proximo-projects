@@ -30,6 +30,7 @@ import Challenge from './Challenge.js'
 
 
 
+
 const titleStyle = {
    fontWeight: "900px",
    fontSize: "30px",
@@ -62,34 +63,19 @@ const colStyle = {
 
 }
 
-class Pillars extends React.Component {
-constructor(props){
-  super(props);
-  this.state = {
-    1: false,
-    2: false,
-    3: false,
-    4: false
-  }
-}
+function Pillars() {
 
-  top() {
-    window.scrollTo(0, 0);
-  }
 
-  handleHover = (e) => {
-    console.log(e.target)
-  }
 
-  render() {
     return (
       <>
-      <FadeIn delay='1500' transitionDuration='1000'>
+
+      <FadeIn delay='3200' transitionDuration='1000'>
         <Challenge />
-    </FadeIn>
+      </FadeIn>
       </>
-    );
-  }
+    )
+
 
 }
 

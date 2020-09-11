@@ -74,7 +74,7 @@ function LandingPageHeader() {
         <div className="content-left">
           {dimensions.width > 700 ? <Container style={{paddingTop: "300px", paddingRight: "0px", paddingLeft: "0px", marginRight: "50px"}}>
             <span> <h1 className="title" style={{textAlign: "right", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
-              <FadeIn delay='500' transitionDuration='1000'>
+              <FadeIn delay='3000' transitionDuration='1000'>
 
                 <span>
             <span style={{fontWeight: "900"}}>
@@ -85,16 +85,19 @@ function LandingPageHeader() {
               PROJECTS
             </span>
           </span>
+          </FadeIn>
 
 
             <p></p>
+          <FadeIn delay='3800' transitionDuration='1000'>
             <span >
               LOUISE FINLAY
             </span>
+          </FadeIn>
 
 
 
-</FadeIn>
+
 
 
 
@@ -109,7 +112,7 @@ function LandingPageHeader() {
           <span>
 
             <h1 className="title" style={{textAlign: "center", fontSize: "60px", letterSpacing: "5px", fontWeight: "300"}}>
-              <FadeIn delay='500' transitionDuration='1000'>
+              <FadeIn delay='3000' transitionDuration='1000'>
 
                 <span>
             <span style={{fontWeight: "900"}}>
@@ -120,9 +123,11 @@ function LandingPageHeader() {
               PROJECTS
             </span>
           </span>
+          </FadeIn>
 
 
             <p></p>
+          <FadeIn delay='3800' transitionDuration='1000'>
             <span >
               LOUISE FINLAY
             </span>
