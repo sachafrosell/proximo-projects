@@ -14,6 +14,8 @@ import Team from './Team.js'
 import InfoFooter from "./components/Footers/InfoFooter.js"
 import LandingPageHeaderMobile from './components/Headers/LandingPageHeader.js'
 import WorkGallery from './WorkGallery.js'
+import WorkGallery2 from './WorkGallery2.js'
+import WorkGallery3 from './WorkGallery3.js'
 import LazyLoad from 'react-lazy-load';
 import Fade from 'react-fade-opacity'
 import './fade.css';
@@ -132,7 +134,7 @@ function LandingPage() {
             width: '200px',
             height: '200px'
           }}
-          />
+        />
       </div>
 
 
@@ -149,7 +151,9 @@ function LandingPage() {
       <About />
 
 
-        <WorkGallery />
+      <WorkGallery />
+      <WorkGallery2 />
+      <WorkGallery3 />
 
 
       <Competition />

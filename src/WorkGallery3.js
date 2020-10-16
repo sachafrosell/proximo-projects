@@ -35,7 +35,7 @@ import LazyLoad from 'react-lazy-load';
 
 
 import finalPresentation from './assets/sherman-residence.pdf'
-import ImgArr from './sherman-residence.js'
+import ImgArr from './drawings.js'
 
 const titleStyle = {
    fontWeight: "900px",
@@ -74,38 +74,7 @@ const items = [
     page: 5,
     altText: "Page 5",
     caption: "Page 5"
-  },
-  {
-    page: 6,
-    altText: "Page 6",
-    caption: "Page 6"
-  },
-  {
-    page: 7,
-    altText: "Page 7",
-    caption: "Page 7"
   }
-  ,
-{
-  page: 8,
-  altText: "Page 8",
-  caption: "Page 8"
-},
-{
-  page: 9,
-  altText: "Page 9",
-  caption: "Page 9"
-},
-{
-  page: 10,
-  altText: "Page 10",
-  caption: "Page 10"
-},
-{
-  page: 11,
-  altText: "Page 11",
-  caption: "Page 11"
-}
 
 ];
 
@@ -209,10 +178,11 @@ function About() {
         style=
         {{textAlign: "center",
           paddingBottom: "125px",
-          paddingTop: "100px",
+
         background: "#cdcdcd" }}
 
                                  >
+
 
         <Row>
           <Col>
@@ -279,17 +249,15 @@ function About() {
           </Col>
           <Col >
             <div style={{paddingRight: '50px'}}>
+
               <h2 style={{textAlign: 'left', paddingTop: "100px"}}>
-                A contemporary modern condo on Miami Beach
+                Bring your ideas to life
               </h2>
+
               <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
-
-
-                for a family with sophisticated tastes who love natural elements, bright colors and the combination of contemporary and classic mid-century fittings and furnishings.
-
-
-
+                Hand drawn plans and elevations can help you envision your space.
               </h5>
+
 
             </div>
 
@@ -299,12 +267,10 @@ function About() {
       </div> : <div
         style=
         {{textAlign: "center",
-            paddingBottom: "50px",
-            paddingTop: "75px",
+        paddingBottom: "50px",
         background: "#cdcdcd" }}
 
       >
-
 
             <div style={{backgroundColor: "white", marginLeft: "50px", marginRight: '50px'}}>
 
@@ -365,12 +331,12 @@ function About() {
                 </Carousel>
 
               </div>
-              <div style={{paddingRight: '50px', paddingLeft: "50px", paddingTop: "50px"}}>
-                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px", paddingTop: "10px"}}>
+
+              <div style={{paddingRight: '50px', paddingLeft: "50px", paddingBottom: "50px"}}>
+                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px", paddingTop: "50px"}}>
 
 
-                  A contemporary modern condo on Miami Beach for a family with sophisticated tastes who love natural elements, bright colors and the combination of contemporary and classic mid-century fittings and furnishings.
-
+                We can bring your ideas to life with hand drawn plans and elevations.
 
 
                 </h5>

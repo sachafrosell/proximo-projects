@@ -35,7 +35,7 @@ import LazyLoad from 'react-lazy-load';
 
 
 import finalPresentation from './assets/sherman-residence.pdf'
-import ImgArr from './sherman-residence.js'
+import ImgArr from './moodboard.js'
 
 const titleStyle = {
    fontWeight: "900px",
@@ -54,58 +54,7 @@ const items = [
     page: 1,
     altText: "Page 1",
     caption: "Page 1"
-  },
-  {
-    page: 2,
-    altText: "Page 2",
-    caption: "Page 2"
-  },
-  {
-    page: 3,
-    altText: "Page 3",
-    caption: "Page 3"
-  },
-  {
-    page: 4,
-    altText: "Page 4",
-    caption: "Page 4"
-  },
-  {
-    page: 5,
-    altText: "Page 5",
-    caption: "Page 5"
-  },
-  {
-    page: 6,
-    altText: "Page 6",
-    caption: "Page 6"
-  },
-  {
-    page: 7,
-    altText: "Page 7",
-    caption: "Page 7"
   }
-  ,
-{
-  page: 8,
-  altText: "Page 8",
-  caption: "Page 8"
-},
-{
-  page: 9,
-  altText: "Page 9",
-  caption: "Page 9"
-},
-{
-  page: 10,
-  altText: "Page 10",
-  caption: "Page 10"
-},
-{
-  page: 11,
-  altText: "Page 11",
-  caption: "Page 11"
-}
 
 ];
 
@@ -209,14 +158,34 @@ function About() {
         style=
         {{textAlign: "center",
           paddingBottom: "125px",
-          paddingTop: "100px",
+
         background: "#cdcdcd" }}
 
                                  >
 
+
         <Row>
+          <Col >
+            <div style={{paddingRight: '50px', paddingLeft: '50px'}}>
+
+              <h2 style={{textAlign: 'left', paddingTop: "100px"}}>
+                Not sure what your style is?
+              </h2>
+
+              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+
+
+
+              We can help you find out with mood boards for any space like these options we created for a clients master bedroom.
+
+
+              </h5>
+
+            </div>
+
+          </Col>
           <Col>
-            <div style={{backgroundColor: "white", margin: "left", marginLeft: "50px", maxWidth: dimensions.width / 2.3}}>
+            <div style={{backgroundColor: "white", margin: "left", maxWidth: dimensions.width / 2.3}}>
 
               <Carousel activeIndex={activeIndex} next={next} previous={previous} >
                 <CarouselIndicators
@@ -277,33 +246,22 @@ function About() {
 
             </div>
           </Col>
-          <Col >
-            <div style={{paddingRight: '50px'}}>
-              <h2 style={{textAlign: 'left', paddingTop: "100px"}}>
-                A contemporary modern condo on Miami Beach
-              </h2>
-              <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
 
-
-                for a family with sophisticated tastes who love natural elements, bright colors and the combination of contemporary and classic mid-century fittings and furnishings.
-
-
-
-              </h5>
-
-            </div>
-
-          </Col>
         </Row>
 
       </div> : <div
         style=
         {{textAlign: "center",
             paddingBottom: "50px",
-            paddingTop: "75px",
+
         background: "#cdcdcd" }}
 
       >
+
+
+
+
+
 
 
             <div style={{backgroundColor: "white", marginLeft: "50px", marginRight: '50px'}}>
@@ -363,18 +321,14 @@ function About() {
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                   </a>
                 </Carousel>
-
               </div>
               <div style={{paddingRight: '50px', paddingLeft: "50px", paddingTop: "50px"}}>
                 <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px", paddingTop: "10px"}}>
-
-
-                  A contemporary modern condo on Miami Beach for a family with sophisticated tastes who love natural elements, bright colors and the combination of contemporary and classic mid-century fittings and furnishings.
-
-
-
+                Not sure what your style is?
                 </h5>
-
+                <h5 className="description" style={{fontSize: "17px", textAlign: "left", color: "#3f3f3f", fontWeight: "500px"}}>
+                We can help you find out with mood boards for any space like these options we created for a clients master bedroom.
+                </h5>
               </div>
 
 

@@ -1,7 +1,6 @@
 import React from "react";
 import ContentCard from "./ContentCard.js"
 import Popup from "./Popup.js"
-
 import store from './Store.js'
 import About from './About.js'
 import Competition from './Competition.js'
@@ -99,7 +98,7 @@ function PillarPage() {
 
     return (
       <>
-      {disableScroll.on()}
+      {dimensions.width > 500 ? disableScroll.on() : ''}
       <div class={fadeStyle.className} style={{width: dimensions.width, height: dimensions.height, pointerEvents: 'none', touchEvents: 'none'}}>
         <img
           src={LogoLight}
