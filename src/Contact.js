@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from 'axios';
+
 
 // components
 import ContentCard from "./ContentCard.js"
@@ -116,6 +118,74 @@ const buttonControl = () => {
 
   }
 
+  const formSubmit = (e) => {
+        e.preventDefault();
+
+        setData({
+            ...data,
+            buttonText: 'Sending...'
+        })
+
+        axios.post('/api/sendmail', data)
+        .then(res => {
+            if(res.data.result !=='success') {
+                setData({
+                    ...data,
+                    buttonText: 'Failed to send',
+                    sent: false,
+                    err: 'fail'
+                })
+                setTimeout(() => {
+                    resetForm()
+                }, 6000)
+            } else {
+                setData({
+                    ...data,
+                    sent: true,
+                    buttonText: 'Sent',
+                    err: 'success'
+                })
+                setTimeout(() => {
+                    resetForm();
+                }, 6000)
+            }
+        }).catch( (err) => {
+            //console.log(err.response.status)
+            setData({
+                ...data,
+                buttonText: 'Failed to send',
+                err: 'fail'
+            })
+        })
+    }
+
+    const resetForm = () => {
+        setData({
+            name: '',
+            email: '',
+            message: '',
+            sent: false,
+            buttonText: 'Send Message',
+            err: ''
+        });
+    }
+
+
+  const [data, setData] = useState({name: 'Full Name...', email: 'Email...', subject: 'Subject...', message: 'Message...', sent: false, buttonText: 'Send Message', err: ''})
+
+
+  const handleChange = (e) => {
+
+      const {name, value} = e.target
+          setData({
+              ...data,
+              [name]: value
+      })
+
+
+  }
+
+
 
 
 
@@ -157,7 +227,6 @@ const buttonControl = () => {
                         <Form>
                           <InputGroup
                             className="name"
-
                           >
                             <InputGroupAddon addonType="prepend">
                               <InputGroupText style={{borderRadius: "0px"}}>
@@ -165,10 +234,10 @@ const buttonControl = () => {
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              placeholder="Full Name..."
+                              placeholder={data.name}
                               type="text"
-
-
+                              onChange={handleChange}
+                              name="name"
                               style={{borderRadius: "0px"}}
                             ></Input>
                           </InputGroup>
@@ -181,9 +250,10 @@ const buttonControl = () => {
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              placeholder="Email..."
+                              placeholder={data.email}
                               type="text"
-
+                              onChange={handleChange}
+                              name="email"
                               style={{borderRadius: "0px"}}
                             ></Input>
                           </InputGroup>
@@ -191,8 +261,20 @@ const buttonControl = () => {
                             <Input
                               cols="80"
                               name="name"
-                              placeholder="Type a message..."
-
+                              placeholder={data.subject}
+                              onChange={handleChange}
+                              name="subject"
+                              rows="1"
+                              type="textarea"
+                            ></Input>
+                          </div>
+                          <div className="textarea-container">
+                            <Input
+                              cols="80"
+                              name="name"
+                              placeholder={data.message}
+                              onChange={handleChange}
+                              name="message"
                               rows="4"
                               type="textarea"
                             ></Input>
@@ -205,9 +287,9 @@ const buttonControl = () => {
 
                           style={{borderRadius: "0px", background: "none", color: "#495057", border: "black"}}
                           size="lg"
-
+                          onClick={formSubmit}
                         >
-                          Send Message
+                          {data.buttonText}
                         </Button>
 
 

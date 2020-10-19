@@ -31,7 +31,6 @@ import {
 import ExamplesNavbar from "./components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "./components/Headers/LandingPageHeader.js";
 import DarkFooter from "./components/Footers/DarkFooter.js";
-import PillarPageHeader from "./components/Headers/PillarPageHeader2.js";
 
 const titleStyle = {
    fontWeight: "900px",
@@ -60,7 +59,7 @@ function PillarPage() {
       <>
         <ExamplesNavbar />
         <div className="wrapper">
-          <PillarPageHeader />
+
         </div>
         <HousingInfo />
 
